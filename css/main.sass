@@ -1,0 +1,1953 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  //font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+/**********Additional style*************************************/
+*, *::after, *::before
+  box-sizing: border-box
+
+/**********SCROLL OFF*************************************/
+::-webkit-scrollbar
+  width: 0
+  background: rgba(255, 255, 255, 0.0)
+
+body
+  font-family: 'PT Sans Narrow', sans-serif
+  font-size: 1.1em
+
+h1
+  font-size: 2.2em
+
+h2
+  font-size: 1.8em
+
+h3
+  font-size: 1.17em
+
+h4
+  font-size: 1.12em
+
+h5
+  font-size: .83em
+
+h6
+  font-size: .75em
+
+.invisible
+  display: none !important
+
+.visible
+  display: block !important
+
+ul
+  list-style: none
+  margin: 5% 0 5% 45%
+  font-size: 1.3em
+  color: #666666
+
+  li
+    &::before
+      content: "\2022"
+      color: #fd7f28
+      font-weight: bold
+      display: inline-block
+      width: 1em
+      margin-left: -1em
+
+section
+  //padding: 3% 0
+  text-align: center
+
+  h1, h2, h3, h4, h5, h6
+    margin: 35px 0 25px 0
+    font-weight: 600
+    text-transform: uppercase
+
+  p
+    color: #616161
+    font-size: 1.1em
+
+.block
+  text-align: right
+  padding: 3%
+
+  p
+    color: #ffffff
+    font-size: 1.2em
+
+  strong
+    color: #0f0f0f
+
+.orange
+  background: #fd7f28
+
+.yellow
+  background: #ffcd8c
+
+.white
+  background: #ffffff
+
+.grey
+  background: #e7e7e7
+
+.butt
+  background: #fd7f28
+  text-align: center
+  padding: 5%
+  font-size: 1.3em
+  color: #ffffff
+  text-transform: uppercase
+  margin: 120px auto
+  width: 50%
+  animation-duration: 1.5s
+  animation-delay: .5s
+  //animation-iteration-count: 3
+
+  &:hover
+    color: #e2e2e2
+    cursor: pointer
+    transition: all 0.3s ease-in-out
+    -webkit-transition: all 0.3s ease-in-out
+    -moz-transition: all 0.3s ease-in-out
+    background: #974219
+
+header
+  padding: 5px
+  font-size: 1.2em
+
+  a
+    color: black
+    text-decoration: underline
+
+  i
+    color: #fd7f28
+
+  span
+    color: #fd7f28
+
+  .logo
+    text-align: right
+
+    img
+      width: 50%
+
+  .phone-header
+    font-size: 1.5em
+    font-weight: 600
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+
+  .adress-header
+    text-align: left
+
+  .social
+    line-height: 3em
+    text-align: center
+
+    i
+      color: #fd7f28
+
+      &:hover
+        color: #974219
+        transition: all 0.3s ease-in-out
+        -webkit-transition: all 0.3s ease-in-out
+        -moz-transition: all 0.3s ease-in-out
+
+/*---------MAIN MENU---------------------*****/
+.active
+  position: relative !important
+
+  &:after
+    width: 90% !important
+
+.fixed
+  position: fixed
+  top: 0
+  width: 100%
+  padding: 2px
+  z-index: 150
+
+.main-menu
+  background: #272727
+  padding: 5px
+  width: 100%
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+  transition: all 0.3s ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
+  -moz-transition: all 0.3s ease-in-out
+
+  a
+    &:hover
+      text-decoration: none
+
+.menu
+  text-align: center
+  position: relative
+
+.phone
+  display: none
+  position: absolute
+  color: #ffffff
+  font-size: 1.7em
+
+.menu__icon
+  display: none
+  width: 45px
+  height: 35px
+  position: relative
+  cursor: pointer
+  z-index: 1001
+
+  span
+    display: block
+    position: absolute
+    height: 3px
+    width: 70%
+    background: #ffffff
+    border-radius: 9px
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+    transition: all 0.3s ease-in-out
+    -webkit-transition: all 0.3s ease-in-out
+    -moz-transition: all 0.3s ease-in-out
+
+    &:nth-child(1)
+      top: 5px
+
+    &:nth-child(2), &:nth-child(3)
+      top: 18px
+
+    &:nth-child(4)
+      top: 31px
+      z-index: 1001
+.menu__links-item__active
+  border-bottom: 3px solid #000
+.menu__links-item
+  position: relative
+  display: inline-block
+  color: #ffffff !important
+  font-size: 1.2em
+  line-height: 2.4em
+  padding: 0 15px
+  text-transform: uppercase
+  text-decoration: none
+  cursor: pointer
+
+  &:after
+    position: absolute
+    content: ''
+    width: 0
+    height: 2px
+    background: #ffffff
+    bottom: 10%
+    left: 5%
+
+  &:hover
+    &:after
+      position: absolute
+      content: ''
+      width: 90%
+      height: 2px
+      background: #ffffff
+      bottom: 10%
+      left: 5%
+      transition: all 0.3s ease-in-out
+      -webkit-transition: all 0.3s ease-in-out
+      -moz-transition: all 0.3s ease-in-out
+
+.menu__links-item-head,
+.menu__links-item-head:hover
+  color: white
+.menu__links-item_dropdown_icon
+  display: block
+  width: 64px
+  height: 48px
+  padding: 0
+  color: #bcbcbc
+  position: absolute
+  right: 10px
+  top: 5px
+  transform: rotate(180deg)
+  transition: .3s
+
+.menu__links-item_dropdown_icon__active
+  transform: rotate(270deg)
+  .menu__links-item-body
+    display: block
+  
+.menu__links-item-body
+  display: none
+  width: auto
+  position: absolute
+  top: 36px
+  right: 0
+  left: 0
+  padding-top: 1px
+  background-color: #272727
+  z-index: 2
+  a
+    &::before
+      content: "\276F"
+      width: 10px
+      height: 10px
+      color: #bcbcbc
+      position: relative
+      left: -10px
+      top: 0
+@media screen and (min-width :1351px)
+  .menu__links-item_dropdown
+    &:hover
+      .menu__links-item-body
+        display: inline-flex
+        align-items: center
+        align-content: center
+        flex-wrap: nowrap
+        width: auto
+  .menu__links-item-body
+    display: none
+    width: auto
+    position: absolute
+    top: 36px
+    right: 0
+    left: 0
+    padding-top: 1px
+    background-color: #272727
+    z-index: 2
+    a
+      font-size: 1em
+
+.menu.menu_state_open
+  .menu__icon span
+    &:nth-child(1)
+      top: 18px
+      width: 0
+      left: 50%
+
+    &:nth-child(2)
+      transform: rotate(45deg)
+
+    &:nth-child(3)
+      transform: rotate(-45deg)
+
+    &:nth-child(4)
+      top: 18px
+      width: 0
+      left: 50%
+
+  .menu__links
+    display: block
+
+/*--------------- section-top ----------- */
+.section-top
+  background: url("../img/new/pic1s.jpg")
+  padding: 0
+
+  .row
+    position: relative
+
+  .col-md-3, .col-md-4, .col-md-6
+    padding: 0
+
+  h1
+    font-size: 3.4em
+    text-align: right
+    color: white
+    padding: 3%
+
+    strong
+      font-size: .5em
+      background: #000000
+      color: white
+      text-transform: none
+      padding: 5px
+
+.shagi_pry_zdachi_med
+  padding: 30px 0%
+  display: grid
+  grid-template-columns: 1fr 2fr
+  gap: 3em
+  padding-right: 4em
+  ol
+    list-style: auto
+    margin-left: 1em
+    display: inline-flex
+    flex-direction: column
+    gap: 1em
+    li
+      font-size: 18px
+  h3.text_no_transform
+    margin-top: 0
+    max-width: 50em
+  .shagi_pry_zdachi_med__img
+    img
+      width: 100%
+      height: auto
+    .text_no_transform
+      display: none
+
+.calc
+  text-transform: uppercase
+  background: #e7e7e7
+  padding: 20px
+  position: absolute
+  width: 100%
+  top: 0
+  z-index: 100
+
+  .header
+    font-size: 1.1em
+    margin: 10px 0
+
+    &:nth-of-type(1)
+      font-size: 1.5em
+      font-weight: 600
+
+    &:nth-of-type(2)
+      text-transform: initial
+      margin-top: 25px
+
+    &:nth-of-type(3)
+      text-transform: initial
+      margin-top: 25px
+
+  hr
+    height: 2px
+    background: #dedede
+
+  .summa
+    font-size: 1.2em
+
+  .sum
+    text-align: right
+    color: #3679b3
+
+  label
+    display: inline-block
+    font-weight: 500
+    margin: 30px 15px 0 0
+
+.gray-bg-block
+  background-color: #f5f5f5
+  padding: 20px
+  .orange
+    color: #FD7F28
+
+.section-advantage
+  h1
+    text-align: left
+
+  img
+    width: 50%
+    margin: 10% 25%
+
+    &:hover
+      animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both
+      transform: translate3d(0, 0, 0)
+      backface-visibility: hidden
+      perspective: 1000px
+
+.section-cooperation
+  border-top: 1px solid #dedede
+  border-bottom: 1px solid #dedede
+  padding-bottom: 0
+
+  .butt
+    padding: 2%
+    font-size: 1.2em
+
+  .calc
+    width: 90%
+    margin: 0 5%
+    position: relative
+
+  ul
+    text-align: left
+
+  .col-md-4, .col-md-6
+    padding: 0
+
+    .block
+      padding-left: 40%
+      text-align: left
+      p
+        color: #000000
+.text_no_transform
+  text-transform: initial
+
+h2.text_no_transform_center
+  font-size: 38px  
+  text-transform: initial
+   text-align: center
+
+h3.text_no_transform
+  text-transform: initial
+  font-size: 36px
+h3.text_no_transform_center
+  text-transform: initial
+  font-size: 36px
+  text-align: center
+h4.text_no_transform_left_orange
+  text-transform: initial
+  font-size: 24px
+  max-width: 776px
+  margin: 0
+  color: #FD7F28
+  text-align: left
+h4.text_no_transform_center_orange
+  text-transform: initial
+  font-size: 24px
+  max-width: 776px
+  margin: auto
+  color: #FD7F28
+  text-align: center
+h5.text_no_transform
+  text-transform: initial
+  font-size: 23px
+
+h6.text_no_transform
+  text-transform: initial
+  font-size: 20px
+
+.gray-bg-block_list
+  margin: auto 0
+  li
+    margin-left: 1em
+    font-size: 18px
+    color: #000
+    font-weight: 400
+    text-transform: initial
+    &::before
+      color: #000
+
+.text-left
+  p
+    color: #000
+    margin-bottom: 15px
+    font-weight: 400
+    font-size: 18px
+    line-height: 24px
+
+.gray-blocks-wrapper
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 24px
+  .gray-bg-block
+    padding: 50px 20px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    gap: 1em
+    h4
+      text-transform: initial
+      font-size: 24px
+      font-weight: 700
+      color: #000
+      margin: 0
+
+
+
+.gde_med_block
+  display: grid
+  grid-template-columns: 2fr 1fr
+  padding: 3em 15px
+  gap: 24px
+  .gde_med_image
+    padding-top: 70px
+    .text_no_transform
+      display: none
+    img
+      height: 100%
+      object-fit: cover
+      object-position: center
+  .gde_med_wrapper
+    h3
+      height: 70px
+      margin: 0
+  .gde_med_wrapper_list
+    display: flex
+    flex-direction: column
+    .gde_med__item
+      &:nth-child(2n + 1)
+        background-color: #f5f5f5
+  .gde_med__item
+    padding: 20px
+
+.podgotovka_k_zdache
+  .podgotovka_k_zdache_wrapper
+    display: grid
+    grid-template-columns: 2fr 1fr
+    padding: 3em 15px
+    padding-right: 0
+    gap: 24px
+  .podgotovka_k_zdache__text
+    h4
+      margin: 0
+    p
+      font-size: 18px
+      color: #272727
+      margin: 15px 0
+    .big_p
+      font-size: 24px
+      font-weight: 400
+      line-height: 32px
+      margin: 0
+      margin-bottom: 20px
+  .podgotovka_k_zdache__image
+    overflow: hidden
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    align-content: flex-start
+    width: 100%
+    height: auto
+    img
+      object-fit: cover
+      width: 100%
+    .butt_med
+      margin: 15px 0 
+
+.svagites_s_nami_i_uznaite_bg
+  padding: 30px 20px
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.92) 50%, rgba(255, 255, 255, 0) 100%), url('/img/new/FB_IMG_1673535950372.jpg')
+  background-size: cover
+  background-position: right
+  ul
+    padding: 20px 0
+    margin: 0 1em
+    margin-right: 0
+    li
+      &::before
+        color: #000
+  .text_no_transform
+    margin: 0
+
+.skolko_stoit_kg-medi
+  .gray-bg-block
+    padding: 20px
+    .text_no_transform
+      margin: 0
+  .col-12
+    padding: 20px
+
+.ecologiceskaya_vihoda_pererobky
+  h3 
+    color: #000
+
+.gde_latun_block
+  display: grid
+  grid-template-columns: 2fr 1fr
+  padding: 3em 15px
+  gap: 24px
+  .gde_latun_image
+    padding-top: 70px
+    .text_no_transform
+      display: none
+    img
+      height: 100%
+      object-fit: cover
+      object-position: center
+  .gde_latun_wrapper
+    h2
+      height: 70px
+      margin: 0
+  .gde_latun_wrapper_list
+    display: flex
+    flex-direction: column
+    .gde_latun__item
+      &:nth-child(2n + 1)
+        background-color: #f5f5f5
+  .gde_latun__item
+    padding: 20px
+
+.kak_polucit_maximalnu_vihodu
+  padding-bottom: 30px
+  p,.orange_bg_p
+    margin-bottom: 15px
+
+.form_ceny_na_latun
+  padding: 30px 0%
+  display: grid
+  grid-template-columns: 1fr 2fr
+  gap: 3em
+  padding-right: 4em
+  ol
+    list-style: auto
+    margin-left: 1em
+    display: inline-flex
+    flex-direction: column
+    gap: 1em
+    li
+      font-size: 18px
+  h3.text_no_transform
+    margin-top: 0
+    max-width: 50em
+  .form_ceny_na_latun__img
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    .text_no_transform
+      display: none
+
+.vigodno_realizuyte
+  .vigodno_realizuyte_wrapper
+    display: grid
+    grid-template-columns: 2fr 1fr
+    padding: 3em 0
+    padding-right: 0
+    gap: 21px
+  .vigodno_realizuyte__text
+    h6
+      margin: 0
+      text-transform: inherit
+      font-size: 18px
+      font-weight: 400
+    p
+      font-size: 18px
+      color: #272727
+      margin: 15px 0
+    .vigodno_realizuyte_list
+      font-size: 18px
+      font-weight: 40000
+      color: #000
+      margin: 0
+      li
+        margin-left: 19px
+        &::before
+          color: #000
+    .big_p
+      font-size: 24px
+      font-weight: 400
+      line-height: 32px
+      margin: 0
+      margin-bottom: 20px
+  .vigodno_realizuyte__image
+    overflow: hidden
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    align-content: flex-start
+    width: 100%
+    height: auto
+    img
+      object-fit: cover
+      width: 100%
+    .butt_med
+      margin: 15px 0 
+
+.ceny_na_priyem_loma
+  .butt
+    display: none
+  h5
+    text-align: center
+    color: #000
+    font-size: 36px
+  .ceny_na_priyem_loma_list
+    padding-left: 15px
+    margin: 0
+    .ceny_na_priyem_loma_item
+      font-size: 24px
+      font-weight: 400
+      text-align: justify
+      color: #000
+      margin-bottom: 15px
+      strong
+        font-weight: 700
+      &::before
+        color: #000
+
+.bezopaniy_priem
+  .text_no_transform_center_orange
+    margin-bottom: 40px
+
+
+.image-full-width
+  object-fit: cover
+  width: 100%
+  height: auto
+
+.butt_med
+  padding: 10px
+  width: 100%
+  margin: 15px auto
+  padding: 20px 0
+  max-width: 100%
+  font-weight: 400
+  font-size: 24px
+  font-style: normal
+
+.main_image_med,
+.main_image_latun
+  img
+    max-height: 150px
+    object-fit: cover
+    width: 100%
+    object-position: center
+
+.main_image_latun,
+.main_image_med
+  display: flex
+  align-items: center
+  flex-direction: column
+
+.main_image_latun_label,
+.main_image_med_label
+  color: black
+
+.pict
+  background: url("../img/new/pic2s.jpg") no-repeat
+  background-position: right
+  background-size: 50% 100%
+
+.section-process
+  border-bottom: 1px solid #bcbcbc
+
+  img
+    margin: 10% 25%
+    width: 50%
+
+    &:hover
+      animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both
+      transform: translate3d(0, 0, 0)
+      backface-visibility: hidden
+      perspective: 1000px
+
+  p
+    text-transform: uppercase
+    text-align: left
+
+    &::after
+      content: '\2192'
+      position: absolute
+      top: 35%
+      right: 0
+      color: #000000
+
+  .none
+    &:after
+      content: none
+
+.section-profit
+  strong
+    color: black
+
+  p
+    text-align: left
+    font-size: 1.5em
+
+  ul
+    text-align: left
+    margin: 0
+
+.section-prof
+  background: url("../img/new/pic3s.jpg") no-repeat
+  background-position: left
+  background-size: 50% 100%
+  padding: 0
+
+  .col-md-6
+    padding: 0
+
+  p
+    text-align: left
+    padding: 2% 3%
+
+  .block
+    height: 3em
+    font-size: 3em
+    text-align: center
+    text-transform: uppercase
+    line-height: 2em
+
+  strong
+    display: inline-block
+    margin-top: 5%
+    color: black
+
+  h2
+    padding: 0 3%
+
+  ul
+    margin: 5% 15%
+    text-align: left
+
+.section-about
+  padding: 0
+  background: url("../img/new/pic4s.png") no-repeat #eeeeee
+  background-size: 25%
+  background-position: 80% 35%
+
+  //.container-fluid
+  //  background: url("../img/new/pic4s.png") no-repeat
+  //  background-size: 100%
+  //  background-position: 85% 100%
+  ul
+    text-align: left
+
+.section-economy
+  p
+    text-align: left
+
+  span
+    display: inline-block
+    margin-top: 35px
+    font-size: 2.5em
+    color: #fd7f28
+
+.section-chugun
+  img
+    &:nth-of-type(1)
+      width: 45%
+      float: left
+      padding-right: 25px
+      position: relative
+
+    &:nth-of-type(2)
+      width: 45%
+      float: right
+      padding-left: 25px
+
+  ul
+    margin: 0 auto
+
+    li
+      margin: 5px
+      padding: 1%
+
+      &:before
+        content: ''
+
+      &:nth-of-type(1)
+        background: #FF9900
+
+      &:nth-of-type(2)
+        background: #FFCC00
+
+      &:nth-of-type(3)
+        background: #FFCC33
+
+      &:nth-of-type(4)
+        background: #CC9900
+
+      &:nth-of-type(5)
+        background: #CC9933
+
+.section-last
+  .yellow
+    padding: 2% 0
+    text-transform: uppercase
+
+    p
+      text-align: center
+
+  img
+    width: 60%
+
+    &:hover
+      animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both
+      transform: translate3d(0, 0, 0)
+      backface-visibility: hidden
+      perspective: 1000px
+
+  strong
+    color: black
+
+  span
+    display: inline-block
+    margin-top: 35px
+    font-size: 2.5em
+    color: #fd7f28
+
+  .pict
+    background: url("../img/new/pic5-2s.jpg") no-repeat
+    background-position: right
+    background-size: 50% 100%
+
+.form-inline
+  margin-top: 35px
+
+.form-control
+  display: block
+  font-size: 1.1em
+  width: 100% !important
+  text-align: center
+  margin-top: 25px
+  height: 50px
+
+  &::placeholder
+    font-weight: lighter
+    text-transform: uppercase
+
+.btn
+  @extend .form-control
+  background: #fd7f28
+  width: 50%
+  text-transform: uppercase
+
+  &:hover
+    background: #974219
+    color: #ffffff
+    transition: all 0.3s ease-in-out
+    -webkit-transition: all 0.3s ease-in-out
+    -moz-transition: all 0.3s ease-in-out
+
+.overlay-callback
+  position: fixed
+  height: 100%
+  width: 100%
+  top: 0
+  display: none
+  background: rgba(0, 0, 0, 0.7)
+  z-index: 250
+
+  #success-message
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: #ffcd8c
+    z-index: 251
+    padding: 2%
+    color: #000000
+    text-align: center
+    font-size: 1.3em
+    display: none
+
+  #form-callback
+    z-index: 1002
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: #ffcd8c
+    padding: 1% 1%
+    text-align: center
+    color: #000000
+    display: none
+    width: 20%
+
+    h3
+      margin: 0
+
+    h4
+      margin-bottom: 50px
+      color: white
+
+.closemodal
+  display: block
+  z-index: 35
+  position: absolute
+  right: 1%
+  top: 3%
+  width: 36px
+  height: 36px
+  opacity: .7
+  transition: transform .5s ease-in-out
+
+  &::after
+    content: ""
+    position: absolute
+    display: block
+    margin: auto
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    width: 28px
+    height: 0
+    border-top: 1px solid #000000
+    transform: rotate(-45deg)
+    transform-origin: center
+
+  &::before
+    content: ""
+    position: absolute
+    display: block
+    margin: auto
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    width: 28px
+    height: 0
+    border-top: 1px solid #000000
+    transform: rotate(45deg)
+    transform-origin: center
+
+  &:hover
+    transform: rotate(180deg)
+    opacity: .8
+    /*transform: scale(1.4)*/
+    cursor: pointer
+
+footer
+  padding: 50px 0
+  background: #e7e7e7
+
+  .social
+    a
+      color: #fd7f28
+
+    i
+      font-size: 1.2em
+
+      &:hover
+        color: #974219
+        transition: all 0.3s ease-in-out
+        -webkit-transition: all 0.3s ease-in-out
+        -moz-transition: all 0.3s ease-in-out
+
+  img
+    width: 50%
+
+  ul
+    margin: 0
+    //font-size: 1em
+    li
+      line-height: 1.6
+      text-transform: uppercase
+
+      &:first-child
+        color: black
+        font-weight: 600
+
+      &::before
+        content: none
+
+  a
+    color: black
+
+  .butt
+    font-size: 1em
+    padding: 1%
+    width: 50%
+    margin: 3% 0
+
+    a
+      color: #ffffff
+
+      &:hover
+        text-decoration: none
+
+.section-demontazh
+  padding: 0 0 50px 0
+
+  img
+    &:nth-of-type(1)
+      width: 30%
+      float: left
+      padding-right: 25px
+
+    &:nth-of-type(2)
+      width: 47%
+      float: right
+      padding-left: 25px
+      width: 50%
+
+.section-med
+  padding: 0 0 50px 0
+
+.text-left
+  .big_p
+    font-size: 24px
+    font-weight: 400
+    line-height: 32px
+    margin-bottom: 20px
+
+.orange_bg_p
+  background-color: #FD7F28
+  padding: 20px
+  p
+    color: #fff
+    line-height: 23px
+    font-size: 18px
+    margin: 0
+
+.section-zvet
+  padding: 0 0 50px 0
+
+  img
+    &:nth-of-type(1)
+      width: 45%
+      float: left
+      padding-right: 25px
+
+    &:nth-of-type(2)
+      width: 30%
+      float: right
+      padding-left: 25px
+
+    &:nth-of-type(3)
+      width: 40%
+      float: left
+      padding-right: 25px
+
+  span
+    color: #fd7f28
+    font-size: 2.5em
+    text-align: center
+    display: block
+    padding: 5% 0
+
+.table-responsive
+  margin-top: 20px
+  font-size: 1.2em
+
+.section-metalloprokat-bu
+  p
+    text-align: center
+
+  img
+    margin: 10% 0
+    width: 90%
+    box-shadow: 1px 1px 10px #4d4d4d
+
+    &:hover
+      transition: .3s ease
+      backface-visibility: hidden
+      transform: scale(1.1)
+
+.section-price
+  padding-bottom: 100px
+
+  a
+    cursor: pointer
+
+  .calc
+    position: static
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.16), 2px 2px 10px 0 rgba(0, 0, 0, 0.12)
+
+  img
+    width: 45%
+    float: left
+    padding-right: 25px
+
+.slog
+  display: inline-block
+  margin: 100px 0
+  text-align: center
+  font-size: 2.2em
+  color: #fd7f28
+
+.section-vyvoz
+  padding-bottom: 100px
+
+  hr
+    margin-top: 70px
+
+  ul
+    margin: 0
+
+  h3
+    font-size: 1.5em
+
+  img
+    &:nth-of-type(1)
+      width: 45%
+      float: left
+      padding-right: 25px
+
+    &:nth-of-type(2)
+      width: 45%
+      float: right
+      padding-left: 25px
+
+.section-contact
+  .col-md-12
+    padding: 0
+
+  .adress
+    margin: 10px
+    font-size: 1.2em
+
+  span
+    color: #fd7f28
+    //font-size: 2.5em
+    text-align: center
+    display: block
+    padding: 5% 0
+
+  a
+    color: black
+
+button
+  background: #fd7f28
+  border: 0
+  padding: 7px
+  transition: .3s
+  &:hover
+    background: #ff6b08
+    color: #ffffff
+
+#map
+  height: 450px
+  width: 100%
+
+.social-block
+  display: none
+  padding: 0 4px
+  background: rgba(255, 255, 255, 0.9)
+  position: fixed
+  bottom: 30px
+  left: 0
+  font-size: 1.8em
+  z-index: 150
+  border-bottom-right-radius: 17px
+
+  a
+    cursor: pointer
+
+.error-p
+  position: relative
+//height: 50vh
+
+.error-ch
+  padding: 10%
+  text-align: center
+  font-size: 3em
+
+
+/* Tablets+ (вертикальная и горизонтальная ориентация) ----------- */
+@media only screen and (min-width: 991px)
+  .menu__links-item_dropdown
+    &:hover
+      .menu__links-item-body
+        display: block
+  .butt_med
+    max-width: 356px
+  .menu__links-item_dropdown_icon
+    display: none
+  .butt_med
+    max-width: 356px
+    height: 71px
+    text-align: center
+
+
+
+/* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
+@media only screen and (max-width: 991px)
+  header
+    display: none
+  nav
+    .menu
+      text-align: right !important
+      .phone
+        display: block !important
+        padding-right: 15px
+        &::after
+          display: inline-block
+          content: '\276F'
+          margin-left: 10px
+          transition: .3s
+          transform: rotate(0deg)
+
+        i
+          color: #ffefe5
+        .other_phones_wrapper
+          display: none
+
+      .phone_active
+        &::after
+          transform: rotate(90deg)
+        .other_phones_wrapper
+          display: block
+          position: absolute
+          top: 40px
+          left: -5px
+          z-index: 1
+          background-color: #272727
+          padding: 10px 15px 15px 5px
+      a
+        color: #ffffff
+
+    .menu__icon
+      display: inline-block
+
+    .menu__links
+      position: fixed
+      display: none
+      top: 0
+      right: 0
+      left: 0
+      margin-top: 0
+      background-color: rgba(0, 0, 0, 0.9)
+      z-index: 1000
+      overflow: auto
+
+    .menu__links-item
+      display: block
+      padding: 4px 0
+      text-align: center
+      color: #ffffff
+  .menu__links-item-body
+    display: none
+    transition: .3s
+    background-color: transparent
+    position: initial!important
+    height: auto
+    .menu__links-item
+      margin: auto
+      font-size: 18px
+      display: block
+      padding: 4px 0
+      &::before
+        opacity: 0
+    .menu__links-item__active
+      &::before
+        opacity: 1
+        content: "\276F"
+        width: 10px
+        height: 10px
+        color: #bcbcbc
+        position: relative
+        left: -10px
+        top: 0
+  
+  .menu__links-item_dropdown__active
+    .menu__links-item-body
+      display: block
+
+  .menu__links-item
+    &:hover
+      &:after
+        display: none
+
+/* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
+@media only screen and (max-width: 480px)
+  h1
+    font-size: 2.5em !important
+  p
+    text-align: justify
+  .calc
+    position: relative
+
+  .butt
+    width: 90%
+
+  .section-cooperation
+    .calc
+      width: 100%
+      margin: 0
+
+    ul
+      margin: 15%
+  .orange, .yellow, .white
+    padding: 10px !important
+  .pict
+    background-position: bottom
+    background-size: 100% 20%
+
+  .section-process
+    p
+      text-align: center
+
+      &::after
+        content: ''
+
+  .section-prof
+    background: none
+
+    p
+      text-align: justify
+
+  .section-about
+    padding: 0
+    background: url("../img/pic3.jpg") no-repeat #eeeeee
+    background-size: 35%
+    background-position: 115% 0%
+
+    .container-fluid
+      background-size: 45%
+      background-position: 95% 100%
+
+    ul
+      margin: 5% 15%
+      text-align: left
+  .section-economy
+    p
+      text-align: justify
+
+  .section-last
+    .pict
+      background: none
+
+    p
+      strong
+        margin-top: 35px
+        display: inline-block
+        text-align: center
+  .section-price
+    .col-md-5
+      padding: 0
+  .overlay-callback
+    #form-callback
+      width: 90%
+      padding: 25px 10px
+
+    #success-message
+      width: 90%
+
+    .form-control
+      margin-top: 20px
+
+  footer
+    text-align: center
+
+    ul
+      margin: 10% 0
+      font-size: 1em
+
+    .social
+      font-size: 2.5em
+
+    .butt
+      width: 90%
+      margin: 5%
+
+  .social-block
+    display: block
+
+  .section-zvet
+    img
+      &:nth-of-type(1)
+        width: 100%
+        float: none
+        padding: 0
+
+      &:nth-of-type(2)
+        width: 100%
+        float: none
+        padding: 0
+
+      &:nth-of-type(3)
+        width: 100%
+        float: none
+        padding: 0
+
+  .section-chugun
+    h1, h2, h3
+      text-align: center !important
+
+    img
+      margin: 0
+
+      &:nth-of-type(1)
+        width: 100%
+        float: none
+        padding: 0
+
+      &:nth-of-type(2)
+        width: 100%
+        float: none
+        padding: 0
+
+    .icon
+      width: 50% !important
+      margin: 10% 15%
+
+  .section-metalloprokat-bu
+    img
+      width: 100%
+  .section-demontazh, .section-vyvoz, .section-price
+    .slog
+      margin: 25px 0
+
+    hr
+      margin: 25px 0
+
+    img
+      &:nth-of-type(1)
+        width: 100%
+        float: none
+        padding-right: 0
+
+      &:nth-of-type(2)
+        width: 100%
+        float: none
+        padding-left: 0
+  
+  .ecologiceskaya_vihoda_pererobky
+    .col-md-12
+      padding: 0
+    .butt
+      width: 100%
+      font-size: 20px
+      line-height: 24px
+      padding: 13px 0
+
+  .characteristics_block
+    .col-md-12
+      padding: 0
+    .butt
+      width: 100%
+      font-size: 20px
+      line-height: 24px
+      padding: 13px 0
+
+  h2.text_no_transform_center
+    font-size: 26px
+  h3.text_no_transform
+    font-size: 24px
+  h3.text_no_transform_center
+    font-size: 24px
+    text-align: left
+  
+  .gray-blocks-wrapper
+    grid-template-columns: 1fr
+    gap: 5px
+    .gray-bg-block
+      padding: 20px 16px
+      h4
+        font-size: 16px
+        line-height: 21px
+      p
+        font-size: 16px
+        line-height: 21px
+        margin-bottom: 7px
+  .gde_med_block
+    grid-template-columns: 1fr
+    padding: 0 1em
+    gap: 1em
+    .gde_med_image
+      order: -1
+      padding: 0
+      img
+        max-height: 150px
+        object-fit: cover
+        object-position: 50% 50%
+      .text_no_transform
+        display: block
+    .gde_med_wrapper
+      .text_no_transform
+        display: none
+  .gde_latun_block
+    grid-template-columns: 1fr
+    padding: 0 1em
+    gap: 1em
+    .gde_latun_image
+      order: -1
+      padding: 0
+      img
+        max-height: 150px
+        object-fit: cover
+        object-position: 50% 50%
+      .text_no_transform
+        display: block
+    .gde_med_wrapper
+      .text_no_transform
+        display: none
+
+
+  .prodat_med_block
+    p
+      font-size: 14px
+      line-height: 18px
+    .col-md-12
+      padding: 0
+  .bezopaniy_priem,.vydy_mednoho_loma
+    .text_no_transform_center
+      margin: 0
+      margin-bottom: 10px
+    .text_no_transform_center_orange, .text_no_transform, p
+      text-align: left
+      font-size: 16px
+      line-height: 21px
+      margin: 0
+      margin-bottom: 10px
+  .shagi_pry_zdachi_med
+    grid-template-columns: 1fr
+    padding-right: 0
+    padding: 0 15px
+    .text_no_transform
+      display: none
+    .shagi_pry_zdachi_med__img
+      img 
+        max-height: 150px
+        height: 100%
+        object-fit: cover
+        object-position: 50% 50%
+        display: block
+  .form_ceny_na_latun
+    grid-template-columns: 1fr
+    padding-right: 0
+    padding: 0 15px
+    .text_no_transform
+      display: none
+    .form_ceny_na_latun__img
+      img 
+        max-height: 150px
+        height: 100%
+        object-fit: cover
+        object-position: 50% 50%
+        display: block
+
+
+  .vigodno_realizuyte
+    .vigodno_realizuyte_wrapper
+      grid-template-columns: 1fr
+      padding:  0
+      .vigodno_realizuyte__text
+        .text_no_transform, p
+          font-size: 16px
+          line-height: 18px
+          margin: 1rem 0
+      .vigodno_realizuyte__image
+        order: -1
+        img
+          max-height: 150px
+          object-fit: cover
+          object-position: 50% 50%
+          width: 100%
+        .butt
+          width: 100%
+          font-size: 20px
+          line-height: 24px
+          margin: 15px 0
+          padding: 11px 0
+          display: none
+
+  .podgotovka_k_zdache
+    .podgotovka_k_zdache_wrapper
+      grid-template-columns: 1fr
+      padding:  0
+      .podgotovka_k_zdache__text
+        .text_no_transform, p
+          font-size: 16px
+          line-height: 18px
+          margin: 1rem 0
+      .podgotovka_k_zdache__image
+        img
+          max-height: 150px
+          object-fit: cover
+          object-position: 50% 50%
+          width: 100%
+        order: -1
+        .butt
+          width: 100%
+          font-size: 20px
+          line-height: 24px
+          margin: 15px 0
+          padding: 11px 0
+
+  
+  .svagites_s_nami_i_uznaite_bg
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.9) 100%), url("/img/new/FB_IMG_1673535950372.jpg")
+    margin: -15px 0
+    padding-bottom: 0
+    ul 
+      li
+        font-size: 14px
+        line-height: 18px
+        color: #000
+    .text_no_transform, p
+      font-size: 14px
+      line-height: 18px
+      color: #000
+    .butt
+      width: 100%
+      font-size: 20px
+      line-height: 24px
+      margin: 15px 0
+      padding: 11px 0
+
+  h4.text_no_transform_left_orange
+    font-size: 14px
+    line-height: 18px
+
+  .ceny_na_priyem_loma
+    h5.text_no_transform
+      font-size: 24px
+    .ceny_na_priyem_loma_list
+      .ceny_na_priyem_loma_item
+        font-size: 16px
+    .butt
+      display: block
+
+  .skolko_stoit_kg-medi
+    .col-12
+      padding: 0
+      .text_no_transform
+        font-size: 16px
+        line-height: 20px
+
+    .gray-bg-block
+      padding: 20px 16px 
+      .text_no_transform
+        font-size: 14px
+        line-height: 18px
+
+  .main_image_latun,.main_image_med
+    min-height: 10rem
+  .main_image_latun_label,.main_image_med_label
+    font-size: 32px
+    text-align: center
+    padding: 0 10px
+  .text-left
+    .big_p
+      line-height: 21px
+      font-size: 16px
+
+.row_gray_bg
+  background-color: #F5F5F5
+  h1
+    text-align: center
+    font-weight: 700
+.color_metal_table
+  width: 100%
+  display: grid
+  grid-template-columns: 1fr
+  gap: 4px
+  :nth-child(2n)
+    & .color_metal_table__item__name,
+    & .color_metal_table__item__value
+      background-color: rgba(255,255 ,255 ,0.5 )
+  .color_metal_table_head,
+  .color_metal_table__item
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 4px
+    span
+      text-align: left
+      font-size: 14px
+      line-height: 18px
+      color: #000
+      padding: 10px
+  .color_metal_table_head
+    gap: 4px
+    .color_metal_table__head_item,
+    .color_metal_table__head_value
+      font-weight: 700
+      background-color: #d9d9d9
+
+  
+  
+.color_metal_card
+  display: flex
+  flex-direction: column
+  background-color: white
+  padding: 20px
+  margin: 20px 5px
+  .color_metal_image
+    order: 1
+    width: 100%
+    max-height: 130px
+    object-fit: cover
+  .color_metal_wrapp
+    order: 2
+    .color_metal_header
+      order: 2
+      font-size: 24px
+      text-transform: inherit
+      margin: 16px 0
+    .color_metal_text
+      order: 3
+      font-size: 14px
+      font-weight: 400
+      line-height: 18px
+    .color_metal_btns
+      display: flex
+      flex-direction: column
+      gap: 5px
+      order: 4
+      button
+        height: 40px
+        width: 100%
+        font-size: 20px
+        font-weight: 400
+        text-transform: uppercase
+      .color_metal_connect
+        color: white
+        background-color: #272727
+      .color_metal_continue
+        color: white
+
+@media screen and (min-width: 480px)
+  .main_image_med,
+  .main_image_latun
+    img
+      max-height: 300px
+  .color_metal_card
+    .color_metal_image
+      max-height: 160px
+      width: 100%!important
+      padding-right: 0!important
+  .color_metal_table
+    gap: 10px
+    .color_metal_table_head,
+    .color_metal_table__item
+      gap: 10px
+      span
+        font-size: 24px
+        line-height: 31px
+    .color_metal_table_head
+      gap: 10px
+
+
+
+@media screen and (min-width: 992px)
+  .color_metal_card
+    display: grid
+    grid-template-columns: 356px 1fr
+    padding: 24px
+    gap: 24px
+    .color_metal_wrapp
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: 47px 1fr 71px
+      gap: 24px
+      height: 100%
+      .color_metal_text
+        max-height: 190px
+        overflow: auto
+      .color_metal_header
+        margin: 10px 0
+        font-size: 36px
+        line-height: 47px
+      .color_metal_btns
+        flex-direction: row
+        gap: 16px
+        button
+          height: 71px
+          width: 242px
+          font-size: 24px
+    .color_metal_image
+      max-height: 356px
+      height: 356px
+      width: 356px!important
+      padding-right: 0!important
+      
+  
+  
+.nav-menu
+  background: blue
+  font-size: 14px
+  font-style: normal
+  font-weight: 700
+  line-height: normal
+

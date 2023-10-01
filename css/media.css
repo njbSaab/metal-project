@@ -1,0 +1,150 @@
+@media (max-width: 992px) {
+    .section-process p {
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .section-process p::after {
+        display: none;
+    }
+
+    footer .butt {
+        font-size: 1em;
+        padding: 1%;
+        width: 50%;
+        margin: 1% auto;  
+    }
+
+    footer img.logo {
+        margin: 0 auto;
+        display: block;
+        padding-bottom: 20px;
+        width: 100px;
+    }
+
+    header .adress-header {
+        text-align: center;
+    }
+
+    .pict {
+        background: none; 
+    }
+
+    header .logo img {
+        width: 100px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .col-md-3 {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .col-md-2 {
+        padding-bottom: 40px;
+    }
+
+    .col-md-2 img{
+        width: 30%;
+    }
+
+    header .logo img {
+        width: 10%;
+    }
+
+    .head-btn {
+        width: 100%;
+      }
+
+    .col-md-3 img{
+        width: 30%;
+    }
+
+    .container-fluid {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .calc1 {
+        display: none;
+    }
+
+    .section-about {
+        background-position: 90% 67%;
+    }
+
+    .section-prof {
+        background: none; 
+    }
+
+    .section-last .pict {
+        background: none;
+    }
+
+    .section-cooperation .calc {
+        margin: 10px 5%;
+    }
+
+    .section-cooperation .col-md-4 .block, .section-cooperation .col-md-6 .block {
+        padding-left: 20px;
+    }
+
+    ul {
+        margin: 5% 0 5% 5%;
+    }
+
+    .text-calc {
+        width: 100%;
+      }
+}
+
+
+@media (max-width: 768px) {
+    .section-about {
+        background-position: 41% 27%;
+    }
+
+    .section-about .container-fluid .row:last-child {
+        margin-top: 200px;
+    }
+
+    section h1, section h2, section h3, section h4, section h5, section h6 {
+        margin: 20px 0 25px 0;
+    }
+
+    footer .butt {
+        padding: 3%;
+        width: 100%; 
+    }
+
+    ul {
+        margin: 5% 0 5% 10%;
+    }
+
+    .section-cooperation .col-md-4 .block, .section-cooperation .col-md-6 .block {
+        padding-left: 4%; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .section-cooperation .calc {
+        margin: 10px;
+    }
+
+    .section-about .container-fluid .row:last-child {
+        margin-top: 247px;
+    }
+}
+
+@media (max-width: 375px) {
+    .phone {
+        font-size: 1.5em;
+        margin-top: 7px;
+    }
+
+    .section-cooperation .calc {
+        width: 94%;
+    }
+}
