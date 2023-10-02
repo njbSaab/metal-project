@@ -47,10 +47,30 @@ ul
 ul li::before
   display: none  
 
+.orange-text
+  color: var(--Main_orange)
+
+.btn-wrapper
+  display: block
+  margin: 0 auto
+
+  .btn-primary
+    color: var(--White, #FFF)
+    text-align: center
+    font-family: var(--fonts-quicksand)
+    font-size: 12px
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    letter-spacing: 0.36px
+    text-transform: uppercase
+    padding: 14px 24px
+    border-radius: 8px
+    background: var(--Main_orange)
+
 
 /* header */
 .header
-  background-color: var(--Light_gray)
   padding: 0
 
 .header a 
@@ -61,7 +81,7 @@ ul li::before
   display: flex
   padding: 15px 28px
   align-items: center
-
+  background-color: var(--Light_gray)
 
 .logo_wrapper
   display: flex
@@ -131,13 +151,13 @@ ul li::before
 
 /* nav */
 .nav-menu
-  background: var(--Main_orange)
   font-size: 14px
   font-style: normal
   font-weight: 700
   line-height: normal
 
   .nav-menu__links
+   background: var(--Main_orange)
    display: flex
    gap: 20px
    align-items: center
@@ -149,7 +169,7 @@ ul li::before
     font-size: 14px
     color: var(--Light_gray)
   
-
+//section-banner
 .banner
   .banner_wrapper
     display: flex
@@ -157,11 +177,20 @@ ul li::before
   .banner_img
     flex: 0 1 50%
 
+    img
+      height: 100%
+
   .banner_contant
     flex: 0 1 50%
     background: var(--Main_black)
     color: var(--Light_gray)
     padding: 30px 0
+
+    h2
+      padding-bottom: 12px
+
+    h3   
+      padding-bottom: 32px
 
     &_wrapper
       display: flex
@@ -174,9 +203,24 @@ ul li::before
 
       ul
         display: flex
+        gap: 14px
 
         li
 
           p
+            text-align: left
             font-size: 14px
             color: var(--Light_gray)
+        
+
+    .btn-wrapper
+        margin: 24px 0 30px
+
+  .circle_done
+    .circle_overline
+      background: orange
+      border-radius: 50%
+      display: flex
+      border: 2px solid white
+
+//section-services
