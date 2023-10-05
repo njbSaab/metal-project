@@ -143,10 +143,8 @@ section p {
   text-transform: uppercase;
   margin: 120px auto;
   width: 50%;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
 }
 .butt:hover {
   color: #e2e2e2;
@@ -399,11 +397,9 @@ header .social i:hover {
   margin: 10% 25%;
 }
 .section-advantage img:hover {
-  -webkit-animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-          animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   perspective: 1000px;
 }
 
@@ -449,11 +445,9 @@ header .social i:hover {
   width: 50%;
 }
 .section-process img:hover {
-  -webkit-animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-          animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   perspective: 1000px;
 }
 .section-process p {
@@ -589,11 +583,9 @@ header .social i:hover {
   width: 60%;
 }
 .section-last img:hover {
-  -webkit-animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-          animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   perspective: 1000px;
 }
 .section-last strong {
@@ -624,10 +616,6 @@ header .social i:hover {
   height: 50px;
 }
 .form-control::-moz-placeholder, .btn::-moz-placeholder {
-  font-weight: lighter;
-  text-transform: uppercase;
-}
-.form-control:-ms-input-placeholder, .btn:-ms-input-placeholder {
   font-weight: lighter;
   text-transform: uppercase;
 }
@@ -847,8 +835,7 @@ footer .butt a:hover {
 }
 .section-metalloprokat-bu img:hover {
   transition: 0.3s ease;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transform: scale(1.1);
 }
 
