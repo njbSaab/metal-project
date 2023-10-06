@@ -24,6 +24,15 @@ img
   height: auto
   display: block
   margin: auto
+
+h1
+  font-size: 32px
+  font-family: var(--fonts-quicksand)
+  font-style: normal
+  font-weight: 700
+  line-height: normal
+  text-transform: initial!important
+  margin: 0!important
     
 h2
   font-size: 32px
@@ -78,9 +87,13 @@ p
 
 ul
   padding: 0  
+  margin: 0
 
 ul li::before
   display: none  
+
+section
+  background: var(--Main_color)
 
 .flex
   display: flex
@@ -98,6 +111,7 @@ ul li::before
 
 .title
   padding-top: 50px  
+  
 
 .btn-wrapper
   display: block
@@ -320,7 +334,7 @@ ul li::before
   .benefits_list
     display: flex
     gap: 24px
-    padding: 24px 42px 42px
+    margin: 36px 0px 36px 36px
 
     li
       flex: 0 0 18%
@@ -396,6 +410,9 @@ ul li::before
     li:nth-child(even)
       display: flex
       align-items: center
+
+  .btn-wrapper
+    display: none
     
 //section-expensive
 .more_expensive
@@ -526,6 +543,7 @@ ul li::before
 
       border: 1px solid var(--Light_gray)
       padding: 12px
+      border-radius: 8px
 
 
       .accordeon
@@ -699,6 +717,8 @@ ul li::before
     display: block
 
   .banner
+    h1
+      padding-bottom: 12px
     img
       object-fit: cover
 
@@ -756,7 +776,7 @@ ul li::before
     .button_group
       grid-area: "button_group"
       margin: 40px 0
-      
+      align-items: center
 
       button
         width: fit-content
@@ -784,7 +804,7 @@ ul li::before
         opacity: 0
 
       ul  
-        padding: 20px 24px
+        padding: 0 20px 24px
         li
           border-bottom: 1px solid #EDEDF0
         
@@ -814,28 +834,192 @@ ul li::before
       color: var(--Light_gray) !important
 
     
-// .footer
-//   .footer_wrapper
-//     display: grid
-//     grid-template-columns: 1fr
-//     grid-template-rows: repeat(4, auto)
-//     grid-template-areas: "button_group" "logo_wrapper" "menu_wrapper" "contacts" "social-for-mobile"
+@media only screen and (max-width: 991px)
+  .title 
+    padding-top: 30px
+  .banner
 
-//     .button_group
-//       grid-area: button_group
+    .banner_wrapper
+      flex-direction: column-reverse
 
-//     .logo_wrapper
-//       grid-area: logo_wrapper
+    h3
+      padding-bottom: 0px !important 
 
-//     .menu_wrapper
-//       grid-area: menu_wrapper
+    .banner_contant
+      padding: 30px 24px 0 24px
 
-//     .contact_wrapper
-//       display: flex
-//       grid-area: contacts
+      .banner_contant_wrapper
+        padding: 24px 0
 
-//       .contacts_flex_box
-//         display: flex
+  .services
+
+    .services_wrapper
+      padding: 20px 24px 0
+
+      .services_content
+        margin: 0
+
+      .services_img
+        display: none
+
+  .benefits_list
+    scroll-snap-type: x mandatory
+    overflow-x: auto
+    gap: 45px !important
+
+    li
+      flex: 1 0 25% !important
+      scroll-snap-align: start
+
+      img
+        max-width: 100px
+        max-height: 85px
       
-//     .social-for-mobile
-      // grid-area: social-for-mobile
+.conditions
+  padding-bottom: 30px
+
+  .conditions_wrapper
+    flex-direction: column
+    gap: 0
+    
+    .emoji_box
+      transform: translateY(-200%)
+
+      img
+        max-width: 72px
+        height: auto
+
+.cooperation
+  padding-bottom: 30px
+
+  ul
+    padding: 24px
+    overflow-x: auto
+    scroll-snap-type: x mandatory 
+    justify-content: initial
+
+    li
+      scroll-snap-align: start
+
+      img
+        max-width: 100px
+      
+      p
+        text-align: center
+
+    li:nth-child(odd)
+      flex: 0 0 75%
+    li:nth-child(even)
+
+        
+  .btn-wrapper
+    display: flex
+
+.more_expensive
+  h2
+    padding-bottom: 12px
+  p
+    padding: 12px 12px 24px
+  
+  
+  .more_expensive_btn
+    padding: 24px 12px
+  
+.about_us
+  padding: 30px 24px
+
+  .about_us_wrapper
+    flex-direction: column
+    gap: 24px
+
+    .img
+      max-width: 122px
+      height: auto
+
+.profite
+  padding-bottom: 30px
+  ul
+    padding: 24px 24px 0
+
+
+.why_we
+  padding: 30px 24px
+  .why_we_wrapper
+    flex-direction: column-reverse
+
+.trust_us
+  padding-bottom: 30px
+  .call
+    padding-top: 30px
+
+@media only screen and (max-width: 768px)
+  .more_expensive
+    .more_expensive_footer_wrapper
+      flex-direction: column
+      gap: 12px
+      padding: 30px 24px
+  .profite
+    ul
+      overflow-x: auto 
+      scroll-snap-type: x mandatory
+      li
+        scroll-snap-align: start
+        flex: 0 0 70%
+        p
+          text-align: center
+
+        img
+          max-width: 100px
+  .issues
+    .issues_wrapper
+      flex-direction: column
+
+@media only screen and (max-width: 480px)
+  h1
+    font-size: 28px
+  h2
+    font-size: 28px
+    max-width: 342px
+  h3
+    font-size: 14px
+  p
+    font-size: 12px
+  a
+    font-size: 12px
+
+  .benefits
+    h2
+      text-align: left
+    ul
+      li
+        flex: 0 0 55% !important
+  .cooperation
+    h2
+      text-align: left
+  .more_expensive
+    .button_group
+      flex-direction: column
+      gap: 10px !important
+
+    .more_expensive_footer
+      h2
+        text-align: left
+  .why_we
+    img
+      max-width: 185px
+  .profite
+    h2
+      text-align: left
+  .issues
+    h2
+     text-align: left
+  .footer
+    ul
+      margin: 0
+    .footer_wrapper
+      .menu_wrapper
+        text-align: left
+        ul
+          gap: 10px !important
+          li:last-child
+            padding-bottom: 0px

@@ -29,6 +29,16 @@ img {
   margin: auto;
 }
 
+h1 {
+  font-size: 32px;
+  font-family: var(--fonts-quicksand);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: initial !important;
+  margin: 0 !important;
+}
+
 h2 {
   font-size: 32px;
   font-family: var(--fonts-quicksand);
@@ -88,10 +98,15 @@ p {
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 ul li::before {
   display: none;
+}
+
+section {
+  background: var(--Main_color);
 }
 
 .flex {
@@ -343,7 +358,7 @@ ul li::before {
 .benefits .benefits_list {
   display: flex;
   gap: 24px;
-  padding: 24px 42px 42px;
+  margin: 36px 0px 36px 36px;
 }
 .benefits .benefits_list li {
   flex: 0 0 18%;
@@ -416,6 +431,9 @@ ul li::before {
 .cooperation ul li:nth-child(even) {
   display: flex;
   align-items: center;
+}
+.cooperation .btn-wrapper {
+  display: none;
 }
 
 .more_expensive h2 {
@@ -542,6 +560,7 @@ ul li::before {
   text-align: left;
   border: 1px solid var(--Light_gray);
   padding: 12px;
+  border-radius: 8px;
 }
 .issues .issues_wrapper li .accordeon {
   margin-left: 12px;
@@ -697,6 +716,9 @@ ul li::before {
   .header {
     display: block;
   }
+  .banner h1 {
+    padding-bottom: 12px;
+  }
   .banner img {
     -o-object-fit: cover;
        object-fit: cover;
@@ -754,6 +776,7 @@ ul li::before {
   .footer .button_group {
     grid-area: "button_group";
     margin: 40px 0;
+    align-items: center;
   }
   .footer .button_group button {
     width: -moz-fit-content;
@@ -782,7 +805,7 @@ ul li::before {
     opacity: 0;
   }
   .footer .menu_wrapper ul {
-    padding: 20px 24px;
+    padding: 0 20px 24px;
   }
   .footer .menu_wrapper ul li {
     border-bottom: 1px solid #EDEDF0;
@@ -811,5 +834,206 @@ ul li::before {
   }
   .under_footer p {
     color: var(--Light_gray) !important;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .title {
+    padding-top: 30px;
+  }
+  .banner .banner_wrapper {
+    flex-direction: column-reverse;
+  }
+  .banner h3 {
+    padding-bottom: 0px !important;
+  }
+  .banner .banner_contant {
+    padding: 30px 24px 0 24px;
+  }
+  .banner .banner_contant .banner_contant_wrapper {
+    padding: 24px 0;
+  }
+  .services .services_wrapper {
+    padding: 20px 24px 0;
+  }
+  .services .services_wrapper .services_content {
+    margin: 0;
+  }
+  .services .services_wrapper .services_img {
+    display: none;
+  }
+  .benefits_list {
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    gap: 45px !important;
+  }
+  .benefits_list li {
+    flex: 1 0 25% !important;
+    scroll-snap-align: start;
+  }
+  .benefits_list li img {
+    max-width: 100px;
+    max-height: 85px;
+  }
+}
+.conditions {
+  padding-bottom: 30px;
+}
+.conditions .conditions_wrapper {
+  flex-direction: column;
+  gap: 0;
+}
+.conditions .conditions_wrapper .emoji_box {
+  transform: translateY(-200%);
+}
+.conditions .conditions_wrapper .emoji_box img {
+  max-width: 72px;
+  height: auto;
+}
+
+.cooperation {
+  padding-bottom: 30px;
+}
+.cooperation ul {
+  padding: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  justify-content: initial;
+}
+.cooperation ul li {
+  scroll-snap-align: start;
+}
+.cooperation ul li img {
+  max-width: 100px;
+}
+.cooperation ul li p {
+  text-align: center;
+}
+.cooperation ul li:nth-child(odd) {
+  flex: 0 0 75%;
+}
+.cooperation .btn-wrapper {
+  display: flex;
+}
+
+.more_expensive h2 {
+  padding-bottom: 12px;
+}
+.more_expensive p {
+  padding: 12px 12px 24px;
+}
+.more_expensive .more_expensive_btn {
+  padding: 24px 12px;
+}
+
+.about_us {
+  padding: 30px 24px;
+}
+.about_us .about_us_wrapper {
+  flex-direction: column;
+  gap: 24px;
+}
+.about_us .about_us_wrapper .img {
+  max-width: 122px;
+  height: auto;
+}
+
+.profite {
+  padding-bottom: 30px;
+}
+.profite ul {
+  padding: 24px 24px 0;
+}
+
+.why_we {
+  padding: 30px 24px;
+}
+.why_we .why_we_wrapper {
+  flex-direction: column-reverse;
+}
+
+.trust_us {
+  padding-bottom: 30px;
+}
+.trust_us .call {
+  padding-top: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .more_expensive .more_expensive_footer_wrapper {
+    flex-direction: column;
+    gap: 12px;
+    padding: 30px 24px;
+  }
+  .profite ul {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .profite ul li {
+    scroll-snap-align: start;
+    flex: 0 0 70%;
+  }
+  .profite ul li p {
+    text-align: center;
+  }
+  .profite ul li img {
+    max-width: 100px;
+  }
+  .issues .issues_wrapper {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 28px;
+    max-width: 342px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 12px;
+  }
+  a {
+    font-size: 12px;
+  }
+  .benefits h2 {
+    text-align: left;
+  }
+  .benefits ul li {
+    flex: 0 0 55% !important;
+  }
+  .cooperation h2 {
+    text-align: left;
+  }
+  .more_expensive .button_group {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+  .more_expensive .more_expensive_footer h2 {
+    text-align: left;
+  }
+  .why_we img {
+    max-width: 185px;
+  }
+  .profite h2 {
+    text-align: left;
+  }
+  .issues h2 {
+    text-align: left;
+  }
+  .footer ul {
+    margin: 0;
+  }
+  .footer .footer_wrapper .menu_wrapper {
+    text-align: left;
+  }
+  .footer .footer_wrapper .menu_wrapper ul {
+    gap: 10px !important;
+  }
+  .footer .footer_wrapper .menu_wrapper ul li:last-child {
+    padding-bottom: 0px;
   }
 }/*# sourceMappingURL=index-new.css.map */
