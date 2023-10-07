@@ -20,7 +20,7 @@ a
   color: transparent
 
 img
-  width: 100%
+  max-width: 100%
   height: auto
   display: block
   margin: auto
@@ -80,7 +80,7 @@ h6
 
 p
   font-family: var(--fonts-quicksand)
-  font-size: 14px !important
+  font-size: 14px
   font-style: normal
   font-weight: 400
   line-height: normal !important
@@ -102,7 +102,6 @@ section
   width: 100%
   height: fit-content !important
 
-
 .orange-text
   color: var(--Main_orange)
 
@@ -112,7 +111,6 @@ section
 .title
   padding-top: 50px  
   
-
 .btn-wrapper
   display: block
   margin: 0 auto
@@ -134,66 +132,6 @@ section
   border-radius: 8px
   background: var(--Main_orange)
 
-
-/* header */
-.header
-  padding: 0
-
-.header a 
-  text-decoration: none
-  font-weight: normal
-  
-
-.header_navbar
-  display: flex
-  padding: 15px 28px
-  align-items: center
-  background-color: var(--Light_gray)
-
-.logo
-  flex: 1 1 auto  
-
-.logo_wrapper
-  display: flex
-  gap: 24px
-  align-items: center
-  font-size: 12px
-  text-align: left
-
-.logo-img
-  max-width: 100px
-  max-height: 94px
-  width: 100%
-  height: 100%
-
-.contacts_wrapper
-  flex: 0 0 45%
-  display: flex
-  align-items: center
-  gap: 42px
-  font-weight: 500 !important
-  font-size: 14px
-
-.contacts_wrapper a
-  display: flex
-  align-items: center
-  gap: 10px
-
-.contacts_wrapper a:first-child
-   padding-bottom: 8px
-
-.phone-header
-  margin: 0 !important
-
-
-.adress-header
-  display: flex
-  flex-direction: column
-
-.location_header
-  font-weight: 200 !important
-  font-size: 14px
-
 .social_wrapper
   flex-basis: 15%
   display: flex
@@ -205,41 +143,98 @@ section
   display: none
 
 .social_wrapper a     
-   width: 24px
-   height: 24px
-   background: var(--Main_orange)
-   display: block
-   margin: auto
-   position: relative
-   border-radius: 10px
+  width: 24px
+  height: 24px
+  background: var(--Main_orange)
+  display: block
+  margin: auto
+  position: relative
+  border-radius: 10px
 
 .social_wrapper svg
-   position: absolute
-   left: 50%
-   top: 50%
-   transform: translate(-50%, -50%)
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+/* header */
+.header
+  padding: 15px 42px
+  background-color: var(--Light_gray)
 
+  a 
+    text-decoration: none
+    font-weight: normal
+    
+  .header_navbar
+    display: flex
+    align-items: center
+    max-width: 1200px
+    margin: 0 auto
+
+    .logo
+      flex: 1 1 auto  
+
+    .logo_wrapper
+      display: flex
+      gap: 24px
+      align-items: center
+      font-size: 12px
+      text-align: left
+
+    .logo-img
+      max-width: 100px
+      max-height: 94px
+      width: 100%
+      height: 100%
+
+    .contacts_wrapper
+      flex: 0 0 45%
+      display: flex
+      align-items: center
+      gap: 42px
+      font-weight: 500 !important
+      font-size: 14px
+
+    .contacts_wrapper a
+      display: flex
+      align-items: center
+      gap: 10px
+
+    .contacts_wrapper a:first-child
+      padding-bottom: 8px
+
+    .phone-header
+      margin: 0 !important
+
+
+    .adress-header
+      display: flex
+      flex-direction: column
+
+    .location_header
+      font-weight: 200 !important
+      font-size: 14px
 /* nav */
 .nav-menu
   font-size: 14px
   font-style: normal
   font-weight: 700
   line-height: normal
+  background: var(--Main_orange)
 
 
   .nav-menu__links
    display: flex
-   gap: 20px
+   gap: 1.16%
    align-items: center
    height: 100%
    padding: 16px 42px
-   background: var(--Main_orange)
+   justify-content: center
 
    a
     font-family: var(--fonts-quicksand)
     font-size: 14px
-    color: var(--Light_gray)
-  
+    color: var(--Light_gray) 
 //section-banner
 .banner
   .banner_wrapper
@@ -250,8 +245,14 @@ section
 
     img
       height: 100%
+      width: 100%
+      object-fit: cover
 
   .banner_contant
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
     flex: 0 1 50%
     background: var(--Main_black)
     color: var(--Light_gray)
@@ -293,7 +294,6 @@ section
       border-radius: 50%
       display: flex
       border: 2px solid white
-
 //section-services
 .services
   
@@ -326,7 +326,6 @@ section
 
   .services_img
     flex: 0 1 50%
-
 //section-benefits
 .benefits
   padding-bottom: 50px
@@ -344,16 +343,19 @@ section
       gap: 22px
       justify-content: flex-start
       align-items: center
+      padding: 10px
+      background: var(--Light_Bg)
+      border-radius: 8px
     
       .img
         height: fit-content !important
 
       h6 
         margin: 20px
+        padding-bottom: 10px
 
       p
         font-size: 14px
-
 //section-conditions
 .conditions 
 
@@ -389,7 +391,6 @@ section
       margin: auto 0
 
   //section-conditions
-
 //section-cooperation
 .cooperation
   padding-bottom: 50px
@@ -398,7 +399,6 @@ section
     display: flex
     justify-content: space-around
     padding: 42px 42px 0
-
     li
       p
         font-size: 14px
@@ -411,12 +411,16 @@ section
       display: flex
       align-items: center
 
+    li:nth-child(odd)
+      padding: 24px
+      background: var(--Light_Bg)
+      border-radius: 8px
+
   .btn-wrapper
-    display: none
-    
+    display: none  
 //section-expensive
 .more_expensive
-
+  background: var(--Light_Bg)
   h2
     padding-bottom: 36px
   
@@ -425,10 +429,14 @@ section
     width: 100%
     margin: 0 auto
     text-align: justify
-    padding-bottom: 60px
 
   .more_expensive_btn
-    padding-bottom: 74px
+    margin: 50px auto 
+    max-width: 712px
+    padding: 12px
+    border-radius: 8px 
+    border: 1px solid var(--Main_color)
+    background: var(--Main_color)
     
     h4
       color: var(--Main_orange)
@@ -445,12 +453,11 @@ section
       gap: 26px
 
   .more_expensive_footer
-    // width: 100%
-    // background: var(--Light_gray)
+    width: 100%
+    background: var(--Light_gray)
     .more_expensive_footer_wrapper
       display: flex
       padding: 50px 42px
-      background: var(--Light_gray)
 
       h2
         flex: 0 0 50%
@@ -458,7 +465,6 @@ section
 
       p
         padding: 0
-
 //section-about_us
 .about_us
   padding: 50px
@@ -480,11 +486,11 @@ section
       h2,
       p,
       span
-        text-align: left
-       
+        text-align: left     
 //section-why_we
 .why_we
   padding: 50px 42px 30px
+  background: var(--Light_Bg)
 
   .why_we_wrapper
     display: flex
@@ -498,23 +504,24 @@ section
 
     .img
       flex: 0 1 50% 
-
 //section-profit
 .profite
   padding-bottom: 50px
   ul
     display: flex
-    padding: 24px 42px 0
-
+    gap: 24px
+    padding: 24px 0
     li
       flex: 1 1 20%
-      gap: 24px
       justify-content: center
       align-items: center
-
+      background: var(--Light_Bg)
+      border-radius: 8px
+      padding: 22px
       img
         padding-bottom: 22px
-
+      p
+        font-size: 14px  
 //section-issues
 .issues
   padding-bottom: 50px
@@ -544,7 +551,16 @@ section
       border: 1px solid var(--Light_gray)
       padding: 12px
       border-radius: 8px
-
+      background: var(--Light_Bg)
+      cursor: pointer
+      transition: .5s
+      
+      &:hover
+        background: var(--Main_color)
+        transition: .5s easy
+      p
+        font-size: 14px
+        padding-top: 10px
 
       .accordeon
          margin-left: 12px
@@ -554,17 +570,19 @@ section
         grid-row: 2
         text-align: left
         margin-left: 12px
-
-
-    
-
-
-
-
-
+        display: none
+        transition: .5s ease-out
+        cursor: pointer
+      
+      &.active 
+        .accordeon_hide_elem 
+          display: block
+          transition: .5s ease-out
+          min-height: fit-content         
 //section-trust_us
 .trust_us
   padding-bottom: 50px
+  background: var(--Light_Bg)
   
   h2
     padding-bottom: 24px
@@ -577,15 +595,14 @@ section
     width: 100%
     margin: 0 auto
 
-  .call
-    padding-top: 100px 
-    max-width: 736px
-    width: 100%
-    margin: 0 auto
-
     h3
       font-weight: 500
-
+//section-call_me
+.call_me
+  padding: 50px 0
+  .call_wrapper
+    max-width: 712px
+    margin: 0 auto
 // footer
 .footer
   background: var(--Light_Bg)
@@ -594,10 +611,11 @@ section
   .footer_wrapper
     display: flex
     align-items: start
-    justify-content: space-between
+    justify-content: space-evenly
     padding: 48px 42px
 
     .logo_wrapper
+      display: flex
       align-items: start
       gap: 24px
       flex: 0 0 auto
@@ -612,7 +630,11 @@ section
         gap: 24px
       
       .social_wrapper
+        display: flex
         justify-content: start
+        svg
+          width: 100%
+
       
     .menu_wrapper
       display: flex
@@ -641,12 +663,16 @@ section
     .contact_wrapper
       display: flex
       flex-direction: column
+
+      .flex
+        flex-direction: column
       
       a
         display: flex
         align-items: center
         gap: 10px
         margin-bottom: 8px
+        font-weight: normal
 
       .phone-header
         display: flex
@@ -660,7 +686,6 @@ section
     .social-for-mobile
       display: none
 
-
   .under_footer
     background: var(--Light_gray)
 
@@ -672,7 +697,6 @@ section
       padding: 22px 40px
       text-align: center
       color: var(--Main_black)
-
 //burger
 .menu_btn
   display: none
@@ -706,8 +730,6 @@ section
   span::after 
     bottom: -10px
 
-
-
 // калькулятор
 // .irs-line 
 //   background: linear-gradient(0deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 100%), #FD7F28 !important
@@ -715,13 +737,14 @@ section
 @media only screen and (max-width: 1350px)
   .header
     display: block
+    padding: 15px 0 0
 
   .banner
     h1
       padding-bottom: 12px
     img
       object-fit: cover
-
+      width: 100%
 
 @media only screen and (max-width: 1250px)
   .header 
@@ -746,12 +769,16 @@ section
           .menu_btn
             display: flex
             align-items: center
+            margin-left: 30px
 
       .contacts_wrapper
         background: var(--Main_color)
         width: 100%
         padding: 15px
         justify-content: center
+        gap: 27px
+        a
+          font-size: 12px 
 
       .social_wrapper 
         display: none
@@ -793,9 +820,7 @@ section
 
       img
         width: 50% !important
-
-      .social_wrapper
-        display: none
+      
 
     .menu_wrapper
       grid-area: menu_wrapper
@@ -816,10 +841,10 @@ section
       background: var(--Light_Bg)
       padding: 10px 0
 
-
       .flex
         gap: 25px
         justify-content: center
+        flex-direction: row !important
 
     .social-for-mobile
       display: flex !important
@@ -828,11 +853,11 @@ section
       padding: 30px
       justify-content: center
 
+
   .under_footer
     background: var(--Main_black) !important
     p
       color: var(--Light_gray) !important
-
     
 @media only screen and (max-width: 991px)
   .title 
@@ -875,82 +900,81 @@ section
         max-width: 100px
         max-height: 85px
       
-.conditions
-  padding-bottom: 30px
+  .conditions
+    padding-bottom: 30px
 
-  .conditions_wrapper
-    flex-direction: column
-    gap: 0
+    .conditions_wrapper
+      flex-direction: column
+      gap: 0
+      
+      .emoji_box
+        transform: translateY(-200%)
+
+        img
+          max-width: 72px
+          height: auto
+
+  .cooperation
+    padding-bottom: 30px
+
+    ul
+      padding: 24px
+      overflow-x: auto
+      scroll-snap-type: x mandatory 
+      justify-content: initial
+
+      li
+        scroll-snap-align: start
+
+        img
+          max-width: 100px
+        
+        p
+          text-align: center
+
+      li:nth-child(odd)
+        flex: 0 0 75%
+      li:nth-child(even)
+
+          
+    .btn-wrapper
+      display: flex !important
+
+  .more_expensive
+    h2
+      padding-bottom: 12px
+    p
+      padding: 12px 12px 24px
     
-    .emoji_box
-      transform: translateY(-200%)
+    
+    .more_expensive_btn
+      padding: 24px 12px
+  
+  .about_us
+    padding: 30px 24px
 
-      img
-        max-width: 72px
+    .about_us_wrapper
+      flex-direction: column
+      gap: 24px
+
+      .img
+        max-width: 122px
         height: auto
 
-.cooperation
-  padding-bottom: 30px
+  .profite
+    padding-bottom: 30px
+    ul
+      padding: 24px 24px 0
 
-  ul
-    padding: 24px
-    overflow-x: auto
-    scroll-snap-type: x mandatory 
-    justify-content: initial
+  .why_we
+    padding: 30px 24px
+    .why_we_wrapper
+      flex-direction: column-reverse
 
-    li
-      scroll-snap-align: start
-
-      img
-        max-width: 100px
-      
-      p
-        text-align: center
-
-    li:nth-child(odd)
-      flex: 0 0 75%
-    li:nth-child(even)
-
-        
-  .btn-wrapper
-    display: flex
-
-.more_expensive
-  h2
-    padding-bottom: 12px
-  p
-    padding: 12px 12px 24px
-  
-  
-  .more_expensive_btn
-    padding: 24px 12px
-  
-.about_us
-  padding: 30px 24px
-
-  .about_us_wrapper
-    flex-direction: column
-    gap: 24px
-
-    .img
-      max-width: 122px
-      height: auto
-
-.profite
-  padding-bottom: 30px
-  ul
-    padding: 24px 24px 0
-
-
-.why_we
-  padding: 30px 24px
-  .why_we_wrapper
-    flex-direction: column-reverse
-
-.trust_us
-  padding-bottom: 30px
-  .call
-    padding-top: 30px
+  .trust_us
+    padding-bottom: 30px
+    .call
+      padding-top: 30px
 
 @media only screen and (max-width: 768px)
   .more_expensive
@@ -982,11 +1006,12 @@ section
     max-width: 342px
   h3
     font-size: 14px
-  p
-    font-size: 12px
   a
     font-size: 12px
 
+  .header
+    .contacts_wrapper
+      gap: 25px !important
   .benefits
     h2
       text-align: left
@@ -995,7 +1020,7 @@ section
         flex: 0 0 55% !important
   .cooperation
     h2
-      text-align: left
+      text-align: left  
   .more_expensive
     .button_group
       flex-direction: column
@@ -1003,7 +1028,11 @@ section
 
     .more_expensive_footer
       h2
-        text-align: left
+        text-align: left 
+  .conditions
+    .emoji_box
+      img
+        max-width: 50px !important
   .why_we
     img
       max-width: 185px
@@ -1012,7 +1041,7 @@ section
       text-align: left
   .issues
     h2
-     text-align: left
+     text-align: left 
   .footer
     ul
       margin: 0
