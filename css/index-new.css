@@ -1043,6 +1043,7 @@ section {
   h2 {
     font-size: 28px;
     max-width: 342px;
+    width: 100%;
   }
   h3 {
     font-size: 14px;
@@ -1072,6 +1073,13 @@ section {
   .conditions .emoji_box img {
     max-width: 50px !important;
   }
+  .trust_us h2 {
+    text-align: center;
+    width: 100% !important;
+  }
+  .trust_us p {
+    padding: 0 20px;
+  }
   .why_we img {
     max-width: 185px;
   }
@@ -1080,6 +1088,9 @@ section {
   }
   .issues h2 {
     text-align: left;
+  }
+  .footer .container-fluid {
+    padding: 0;
   }
   .footer ul {
     margin: 0;
@@ -1092,5 +1103,8 @@ section {
   }
   .footer .footer_wrapper .menu_wrapper ul li:last-child {
     padding-bottom: 0px;
+  }
+  .footer .footer_wrapper .social_wrapper {
+    display: none !important;
   }
 }/*# sourceMappingURL=index-new.css.map */
