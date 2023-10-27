@@ -32,6 +32,7 @@ $(document).ready(function () {
       $(".main-menu").removeClass("fixed");
     }
   });
+
   /*-----------Calculator-----------*/
   kg = 0;
   km = 0;
