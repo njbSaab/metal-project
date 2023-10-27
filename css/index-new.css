@@ -5,6 +5,7 @@
   accent-color: #FD7F28;
   --Light_gray: #EDEDF0;
   --Main_orange: #FD7F28;
+  --Main_orange_dark: #ac591e;
   --Main_black: #272727;
   --Light_Bg: #f9f9f9;
   --Main_color: #fff;
@@ -189,6 +190,15 @@ section {
   margin: auto;
   position: relative;
   border-radius: 10px;
+  transition: 0.3s easy;
+}
+
+.social_wrapper {
+  transition: 0.3s;
+}
+.social_wrapper a:hover {
+  transition: 0.3s;
+  background: var(--Main_orange_dark);
 }
 
 .social_wrapper svg {
@@ -198,7 +208,20 @@ section {
   transform: translate(-50%, -50%);
 }
 
-/* header */
+.contacts_wrapper {
+  /* header */
+}
+.contacts_wrapper a {
+  transition: 0.3s;
+}
+.contacts_wrapper a svg {
+  transition: 0.3s;
+}
+.contacts_wrapper a:hover svg path {
+  transition: 0.3s;
+  fill: var(--Main_orange_dark);
+}
+
 .header {
   padding: 15px 42px !important;
   background-color: var(--Light_gray);
@@ -277,12 +300,14 @@ section {
   font-family: var(--fonts-quicksand);
   font-size: 14px;
   color: var(--Light_gray);
+  transition: all 0.3s;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
-.nav-menu .nav-menu__links a:hover {
-  transition: all 0.3s ease-in-out;
+.nav-menu a:hover {
+  color: var(--Main_black);
+  transition: all 0.3s;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
 }
@@ -367,6 +392,7 @@ section {
 }
 .services .services_content p {
   text-align: left;
+  color: var(--Main_black);
 }
 .services .services_img {
   flex: 0 1 50%;
@@ -402,6 +428,7 @@ section {
 }
 .benefits .benefits_list li p {
   font-size: 14px;
+  color: var(--Main_black);
 }
 
 .calculate {
@@ -854,7 +881,8 @@ section {
   flex: 0 0 auto;
 }
 .footer .footer_wrapper .logo_wrapper .logo img {
-  width: 100%;
+  width: 79px;
+  height: auto;
 }
 .footer .footer_wrapper .logo_wrapper .logo_wrapper_naming {
   display: flex;

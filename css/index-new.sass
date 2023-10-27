@@ -4,6 +4,7 @@
   accent-color: #FD7F28
   --Light_gray: #EDEDF0
   --Main_orange: #FD7F28
+  --Main_orange_dark: #ac591e
   --Main_black: #272727
   --Light_Bg: #f9f9f9
   --Main_color: #fff
@@ -27,6 +28,7 @@ a
     transition: all 0.3s ease-in-out
     -webkit-transition: all 0.3s ease-in-out
     -moz-transition: all 0.3s ease-in-out
+
 img
   max-width: 100%
   height: auto
@@ -160,13 +162,32 @@ section
   margin: auto
   position: relative
   border-radius: 10px
+  transition: .3s easy
+
+.social_wrapper
+  transition: .3s 
+  a:hover
+    transition: .3s
+    background: var(--Main_orange_dark)
 
 .social_wrapper svg
   position: absolute
   left: 50%
   top: 50%
   transform: translate(-50%, -50%)
-/* header */
+
+.contacts_wrapper
+  a
+    transition: .3s 
+    svg
+      transition: .3s
+  a:hover
+    svg
+      path
+        transition: .3s
+        fill: var(--Main_orange_dark)
+
+  /* header */
 .header
   padding: 15px 42px !important
   background-color: var(--Light_gray)
@@ -211,11 +232,10 @@ section
       gap: 10px
 
     .contacts_wrapper a:first-child
-      padding-bottom: 8px
+      padding-bottom: 8px       
 
     .phone-header
       margin: 0 !important
-
 
     .adress-header
       display: flex
@@ -245,13 +265,17 @@ section
     font-family: var(--fonts-quicksand)
     font-size: 14px
     color: var(--Light_gray) 
+    transition: all 0.3s 
     -webkit-transition: all 0.3s ease-in-out
     -moz-transition: all 0.3s ease-in-out
     cursor: pointer
-    &:hover
-      transition: all 0.3s ease-in-out
+    
+  a:hover
+      color: var(--Main_black) 
+      transition: all 0.3s 
       -webkit-transition: all 0.3s ease-in-out
       -moz-transition: all 0.3s ease-in-out
+
 //section-banner
 .banner
   .banner_wrapper
@@ -340,6 +364,7 @@ section
 
     p
       text-align: left
+      color: var(--Main_black)
 
   .services_img
     flex: 0 1 50%
@@ -373,6 +398,7 @@ section
 
       p
         font-size: 14px
+        color: var(--Main_black)
 //section-calc
 .calculate
   padding-bottom: 50px
@@ -800,9 +826,9 @@ section
       gap: 24px
       flex: 0 0 auto
 
-
       .logo img
-        width: 100%
+            width: 79px
+            height: auto
 
       .logo_wrapper_naming
         display: flex
