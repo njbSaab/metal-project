@@ -480,10 +480,12 @@ section
       input
         background: var(--Light_Bg)
         margin: 0
+        cursor: pointer
 
       input:checked
         background: var(--Main_orange)
         color: var(--Main_color)
+        cursor: pointer
 
       label
         margin: 0
@@ -878,7 +880,16 @@ section
         align-items: center
         gap: 10px
         margin-bottom: 8px
-        font-weight: normal
+        font-weight: normal        
+        transition: .3s 
+        svg
+          transition: .3s
+      a:hover
+        svg
+          path
+            transition: .3s
+            fill: var(--Main_orange_dark)
+
 
       .phone-header
         display: flex
@@ -985,7 +996,7 @@ section
         gap: 27px
         a
           font-size: 12px 
-
+        
       .social_wrapper 
         display: none
 

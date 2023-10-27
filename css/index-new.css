@@ -518,10 +518,12 @@ section {
 .calculate .calculate_wrapper .calc_checkbox input {
   background: var(--Light_Bg);
   margin: 0;
+  cursor: pointer;
 }
 .calculate .calculate_wrapper .calc_checkbox input:checked {
   background: var(--Main_orange);
   color: var(--Main_color);
+  cursor: pointer;
 }
 .calculate .calculate_wrapper .calc_checkbox label {
   margin: 0;
@@ -933,6 +935,14 @@ section {
   gap: 10px;
   margin-bottom: 8px;
   font-weight: normal;
+  transition: 0.3s;
+}
+.footer .footer_wrapper .contact_wrapper a svg {
+  transition: 0.3s;
+}
+.footer .footer_wrapper .contact_wrapper a:hover svg path {
+  transition: 0.3s;
+  fill: var(--Main_orange_dark);
 }
 .footer .footer_wrapper .contact_wrapper .phone-header {
   display: flex;
