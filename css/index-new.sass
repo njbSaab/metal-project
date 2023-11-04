@@ -1,13 +1,15 @@
 /* index-new */
 :root 
   /* variable colors */
-  accent-color: #FD7F28
   --Light_gray: #EDEDF0
   --Main_orange: #FD7F28
   --Main_orange_dark: #ac591e
   --Main_black: #272727
+  --Main_black_opacity: #27272778
   --Light_Bg: #f9f9f9
   --Main_color: #fff
+  --Main_red: #e51111
+  --Main_red_opacity: #e5111158
   --Gradient-orange: linear-gradient(0deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 100%), #FD7F28
   /* fonts */
   --fonts-quicksand: 'Quicksand', sans-serif
@@ -760,12 +762,10 @@ section
         grid-row: 2
         text-align: left
         margin-left: 12px
-        display: none
-        opacity: 0
         cursor: pointer
         max-height: 0
         overflow: hidden
-        transition: opacity .5s ease-out, height .5s ease-out
+        transition: max-height .2s linear
       
       &.active 
         .img_wrapper::after
@@ -779,13 +779,8 @@ section
             left: 50%
             transform: translate(-50%, -50%)
         .accordeon_hide_elem 
-          opacity: 1
-          display: block
-          transition: .5s ease-out
-          min-height: fit-content      
-          height: auto
+          transition: max-height .2s linear
           max-height: 500px
-
 
 //section-trust_us
 .trust_us
@@ -922,6 +917,7 @@ section
   width: 38px
   height: 38px
   padding: 8px
+  cursor: pointer
 
   span
     width: 30px 
@@ -947,9 +943,63 @@ section
   span::after 
     bottom: -10px
 
-// калькулятор
-// .irs-line 
-//   background: linear-gradient(0deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 100%), #FD7F28 !important
+.menu_btn_sidenav
+  display: none
+  position: fixed
+  z-index: 2
+  width: 0%
+  height: 100%
+  top: 0
+  right: 0
+  align-items: start
+  background: var(--Light_Bg)
+  padding: 37px 0 0 20px
+  transition: .4s ease-out-in
+  &.opened
+      display: flex
+      flex-direction: column
+      transition: .4s ease-out-in
+
+
+  .icon-cancel
+    color: var(--Main_black)
+    width: fit-content
+    font-size: x-large
+    display: block
+    margin: 0 17px 0 auto
+    padding: 0px 8px
+    border-radius: 25%
+    transition: .3s ease
+    cursor: pointer
+    &:active
+      background: var(--Main_red)
+      transition: .3s ease
+
+    &:hover
+      background: var(--Main_red_opacity)
+      transition: .3s ease
+  ul
+    text-align: left
+    width: 90%
+    li
+      padding: 10px 10px
+    li:not(:last-child)
+      border-bottom: 1px solid var(--Light_gray)
+
+      a
+        color: var(--Main_black)
+        text-align: left
+        
+.opacity-background
+  position: fixed
+  width: 100%
+  height: 100%
+  z-index: 1
+  background: var(--Main_black_opacity)
+  top: 0
+  right: 0
+  display: none
+    
 
 @media only screen and (max-width: 1350px)
   .header
@@ -1220,6 +1270,8 @@ section
 
   .header
     padding: 0 !important
+    .menu_btn_sidenav
+      padding: 34px 0 0 20px
     .logo_wrapper_naming
       span
         font-size: 10px
