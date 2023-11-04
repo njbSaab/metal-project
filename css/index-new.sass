@@ -1,5 +1,7 @@
 /* index-new */
 :root 
+  accent-color: #FD7F28
+
   /* variable colors */
   --Light_gray: #EDEDF0
   --Main_orange: #FD7F28
@@ -14,180 +16,190 @@
   /* fonts */
   --fonts-quicksand: 'Quicksand', sans-serif
 
-body
+.default-styles
   font-family: var(--fonts-quicksand)
   font-size: 14px
   font-weight: normal
   background: var(--Light_Bg)
-a
-  text-decoration: none
-  color: transparent
-  -webkit-transition: all 0.3s ease-in-out
-  -moz-transition: all 0.3s ease-in-out
-  cursor: pointer
-  &:hover
-    color: var(--Main_orange)
-    transition: all 0.3s ease-in-out
+  a
+    font-weight: normal
+    color: inherit
+    text-decoration: none
     -webkit-transition: all 0.3s ease-in-out
     -moz-transition: all 0.3s ease-in-out
+    cursor: pointer
+    &:hover
+      color: var(--Main_orange)
+      transition: all 0.3s ease-in-out
+      -webkit-transition: all 0.3s ease-in-out
+      -moz-transition: all 0.3s ease-in-out
 
-img
-  max-width: 100%
-  height: auto
-  display: block
-  margin: auto
+  img
+    max-width: 100%
+    height: auto
+    display: block
+    margin: auto
 
-h1
-  font-size: 32px
-  font-family: var(--fonts-quicksand)
-  font-style: normal
-  font-weight: 700
-  line-height: normal
-  text-transform: initial!important
-  margin: 0!important
-    
-h2
-  font-size: 32px
-  font-family: var(--fonts-quicksand)
-  font-style: normal
-  font-weight: 700
-  line-height: normal
-  text-transform: initial!important
-  margin: 0!important
+  h1
+    font-size: 32px
+    font-family: var(--fonts-quicksand)
+    font-style: normal
+    font-weight: 700
+    line-height: normal
+    text-transform: initial!important
+    margin: 0!important
+      
+  h2
+    font-size: 32px
+    font-family: var(--fonts-quicksand)
+    font-style: normal
+    font-weight: 700
+    line-height: normal
+    text-transform: initial!important
+    margin: 0!important
 
-h3
-  font-family: var(--fonts-quicksand)
-  font-size: 16px
-  font-style: normal
-  font-weight: 700
-  line-height: normal 
-  text-transform: initial!important
-  margin: 0!important
+  h3
+    font-family: var(--fonts-quicksand)
+    font-size: 16px
+    font-style: normal
+    font-weight: 700
+    line-height: normal 
+    text-transform: initial!important
+    margin: 0!important
 
-h4
-  font-family: var(--fonts-quicksand)
-  font-size: 16px
-  font-style: normal
-  font-weight: 500 !important
-  line-height: normal
-  text-transform: initial !important
-  margin: 0 !important
+  h4
+    font-family: var(--fonts-quicksand)
+    font-size: 16px
+    font-style: normal
+    font-weight: 500 !important
+    line-height: normal
+    text-transform: initial !important
+    margin: 0 !important
 
-.nj-h5
-  font-family: var(--fonts-quicksand)
-  font-size: 16px !important
-  font-style: normal
-  font-weight: 500
-  line-height: normal !important
-  margin: 0 !important
+  h5
+    font-family: var(--fonts-quicksand)
+    font-size: 16px !important
+    font-style: normal
+    font-weight: 500
+    line-height: normal !important
+    margin: 0 !important
 
-h6
-  font-family: var(--fonts-quicksand)
-  font-size: 14px
-  font-style: normal
-  font-weight: 500
-  line-height: normal
-  text-transform: initial !important
-  margin: 0 !important
+  h6
+    font-family: var(--fonts-quicksand)
+    font-size: 14px
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    text-transform: initial !important
+    margin: 0 !important
 
-p
-  font-family: var(--fonts-quicksand)
-  font-size: 14px
-  font-style: normal
-  font-weight: 400
-  line-height: normal !important
+  p
+    font-family: var(--fonts-quicksand)
+    font-size: 14px
+    font-style: normal
+    font-weight: 400
+    line-height: normal !important
 
-ul
-  padding: 0  
-  margin: 0
+  ul
+    padding: 0  
+    margin: 0
 
-ul li::before
-  display: none  
+  ul li::before
+    display: none  
 
-section
-  background: var(--Main_color)
-
-.flex
-  display: flex
-    
-.img
-  width: 100%
-  height: fit-content !important
-
-.orange-text
-  color: var(--Main_orange)
-
-.bold-text
-  font-weight: 700
-
-.title
-  padding-top: 50px  
+  section
+    background: var(--Main_color)
   
-.btn-wrapper
-  display: block
-  margin: 0 auto
+  .link_contact
+    a
+      color: var(--Main_black)
+      font-family: Quicksand
+      font-size: 14px
+      font-style: normal
+      font-weight: 500
+      line-height: normal
 
-  button
-    width: fit-content
+  .flex
+    display: flex
+      
+  .img
+    width: 100%
+    height: fit-content !important
 
-.btn-default
-  color: var(--White, #FFF)
-  text-align: center
-  font-family: var(--fonts-quicksand)
-  font-size: 12px
-  font-style: normal
-  font-weight: 600
-  line-height: normal
-  letter-spacing: 0.36px
-  text-transform: uppercase
-  padding: 14px 24px
-  border-radius: 8px
-  background: var(--Main_orange)
-  animation-duration: 1.5s
-  animation-delay: .5s
+  .orange-text
+    color: var(--Main_orange)
 
-.social_wrapper
-  flex-basis: 15%
-  display: flex
-  align-items: center
-  justify-content: flex-end
-  gap: 8px
+  .bold-text
+    font-weight: 700
 
-.social_wrapper li::before
-  display: none
+  .title
+    padding-top: 50px  
+    
+  .btn-wrapper
+    display: block
+    margin: 0 auto
 
-.social_wrapper a     
-  width: 24px
-  height: 24px
-  background: var(--Main_orange)
-  display: block
-  margin: auto
-  position: relative
-  border-radius: 10px
-  transition: .3s easy
+    button
+      width: fit-content
 
-.social_wrapper
-  transition: .3s 
-  a:hover
-    transition: .3s
-    background: var(--Main_orange_dark)
+  .btn-default
+    color: var(--White, #FFF)
+    text-align: center
+    font-family: var(--fonts-quicksand)
+    font-size: 12px
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    letter-spacing: 0.36px
+    text-transform: uppercase
+    padding: 14px 24px
+    border-radius: 8px
+    background: var(--Main_orange)
+    animation-duration: 1.5s
+    animation-delay: .5s
 
-.social_wrapper svg
-  position: absolute
-  left: 50%
-  top: 50%
-  transform: translate(-50%, -50%)
+  .social_wrapper
+    flex-basis: 15%
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    gap: 8px
 
-.contacts_wrapper
-  a
+  .social_wrapper li::before
+    display: none
+
+  .social_wrapper a     
+    width: 24px
+    height: 24px
+    background: var(--Main_orange)
+    display: block
+    margin: auto
+    position: relative
+    border-radius: 10px
+    transition: .3s easy
+
+  .social_wrapper
     transition: .3s 
-    svg
+    a:hover
       transition: .3s
-  a:hover
-    svg
-      path
+      background: var(--Main_orange_dark)
+
+  .social_wrapper svg
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+  .contacts_wrapper
+    a
+      transition: .3s 
+      svg
         transition: .3s
-        fill: var(--Main_orange_dark)
+    a:hover
+      svg
+        path
+          transition: .3s
+          fill: var(--Main_orange_dark)
 
   /* header */
 .header
@@ -520,7 +532,8 @@ section
         -moz-transition: all 0.3s ease-in-out
     
   //section-conditions
-.conditions 
+
+  .conditions 
 
   padding-bottom: 50px
 
@@ -781,7 +794,6 @@ section
         .accordeon_hide_elem 
           transition: max-height .2s linear
           max-height: 500px
-
 //section-trust_us
 .trust_us
   padding-bottom: 50px
@@ -1004,7 +1016,7 @@ section
 @media only screen and (max-width: 1350px)
   .header
     display: block
-    padding: 15px 0 0 !important
+    padding: 0 !important
 
   .banner
     h1
@@ -1081,6 +1093,8 @@ section
       background: var(--Light_gray)
       padding: 10px 0
       justify-content: center
+      .logo_wrapper_naming
+        align-items: center
 
       .logo
         flex: 0 1 30%
@@ -1257,6 +1271,7 @@ section
       flex-direction: column
 
 @media only screen and (max-width: 480px)
+  .default-styles
   h1
     font-size: 28px
   h2
@@ -1267,11 +1282,16 @@ section
     font-size: 14px
   a
     font-size: 12px
+  .contact_links
+    .contact_link
+      font-size: 10px
+      font-weight: normal
+      color: var(--Main_black)
 
   .header
     padding: 0 !important
     .menu_btn_sidenav
-      padding: 34px 0 0 20px
+      padding: 25px 0 0 20px
     .logo_wrapper_naming
       span
         font-size: 10px

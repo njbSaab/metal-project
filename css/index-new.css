@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* index-new */
 :root {
+  accent-color: #FD7F28;
   /* variable colors */
   --Light_gray: #EDEDF0;
   --Main_orange: #FD7F28;
@@ -16,35 +17,34 @@
   --fonts-quicksand: "Quicksand", sans-serif;
 }
 
-body {
+.default-styles {
   font-family: var(--fonts-quicksand);
   font-size: 14px;
   font-weight: normal;
   background: var(--Light_Bg);
+  /* header */
 }
-
-a {
+.default-styles a {
+  font-weight: normal;
+  color: inherit;
   text-decoration: none;
-  color: transparent;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
-a:hover {
+.default-styles a:hover {
   color: var(--Main_orange);
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
 }
-
-img {
+.default-styles img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: auto;
 }
-
-h1 {
+.default-styles h1 {
   font-size: 32px;
   font-family: var(--fonts-quicksand);
   font-style: normal;
@@ -53,8 +53,7 @@ h1 {
   text-transform: initial !important;
   margin: 0 !important;
 }
-
-h2 {
+.default-styles h2 {
   font-size: 32px;
   font-family: var(--fonts-quicksand);
   font-style: normal;
@@ -63,8 +62,7 @@ h2 {
   text-transform: initial !important;
   margin: 0 !important;
 }
-
-h3 {
+.default-styles h3 {
   font-family: var(--fonts-quicksand);
   font-size: 16px;
   font-style: normal;
@@ -73,8 +71,7 @@ h3 {
   text-transform: initial !important;
   margin: 0 !important;
 }
-
-h4 {
+.default-styles h4 {
   font-family: var(--fonts-quicksand);
   font-size: 16px;
   font-style: normal;
@@ -83,8 +80,7 @@ h4 {
   text-transform: initial !important;
   margin: 0 !important;
 }
-
-.nj-h5 {
+.default-styles h5 {
   font-family: var(--fonts-quicksand);
   font-size: 16px !important;
   font-style: normal;
@@ -92,8 +88,7 @@ h4 {
   line-height: normal !important;
   margin: 0 !important;
 }
-
-h6 {
+.default-styles h6 {
   font-family: var(--fonts-quicksand);
   font-size: 14px;
   font-style: normal;
@@ -102,60 +97,57 @@ h6 {
   text-transform: initial !important;
   margin: 0 !important;
 }
-
-p {
+.default-styles p {
   font-family: var(--fonts-quicksand);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal !important;
 }
-
-ul {
+.default-styles ul {
   padding: 0;
   margin: 0;
 }
-
-ul li::before {
+.default-styles ul li::before {
   display: none;
 }
-
-section {
+.default-styles section {
   background: var(--Main_color);
 }
-
-.flex {
+.default-styles .link_contact a {
+  color: var(--Main_black);
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.default-styles .flex {
   display: flex;
 }
-
-.img {
+.default-styles .img {
   width: 100%;
   height: -moz-fit-content !important;
   height: fit-content !important;
 }
-
-.orange-text {
+.default-styles .orange-text {
   color: var(--Main_orange);
 }
-
-.bold-text {
+.default-styles .bold-text {
   font-weight: 700;
 }
-
-.title {
+.default-styles .title {
   padding-top: 50px;
 }
-
-.btn-wrapper {
+.default-styles .btn-wrapper {
   display: block;
   margin: 0 auto;
 }
-.btn-wrapper button {
+.default-styles .btn-wrapper button {
   width: -moz-fit-content;
   width: fit-content;
 }
-
-.btn-default {
+.default-styles .btn-default {
   color: var(--White, #FFF);
   text-align: center;
   font-family: var(--fonts-quicksand);
@@ -171,20 +163,17 @@ section {
   animation-duration: 1.5s;
   animation-delay: 0.5s;
 }
-
-.social_wrapper {
+.default-styles .social_wrapper {
   flex-basis: 15%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 8px;
 }
-
-.social_wrapper li::before {
+.default-styles .social_wrapper li::before {
   display: none;
 }
-
-.social_wrapper a {
+.default-styles .social_wrapper a {
   width: 24px;
   height: 24px;
   background: var(--Main_orange);
@@ -194,32 +183,26 @@ section {
   border-radius: 10px;
   transition: 0.3s easy;
 }
-
-.social_wrapper {
+.default-styles .social_wrapper {
   transition: 0.3s;
 }
-.social_wrapper a:hover {
+.default-styles .social_wrapper a:hover {
   transition: 0.3s;
   background: var(--Main_orange_dark);
 }
-
-.social_wrapper svg {
+.default-styles .social_wrapper svg {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
-.contacts_wrapper {
-  /* header */
-}
-.contacts_wrapper a {
+.default-styles .contacts_wrapper a {
   transition: 0.3s;
 }
-.contacts_wrapper a svg {
+.default-styles .contacts_wrapper a svg {
   transition: 0.3s;
 }
-.contacts_wrapper a:hover svg path {
+.default-styles .contacts_wrapper a:hover svg path {
   transition: 0.3s;
   fill: var(--Main_orange_dark);
 }
@@ -436,6 +419,7 @@ section {
 .calculate {
   padding-bottom: 50px;
   background: var(--Light_Bg);
+  padding-bottom: 50px;
 }
 .calculate h2 {
   padding-bottom: 24px;
@@ -561,36 +545,32 @@ section {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
 }
-
-.conditions {
-  padding-bottom: 50px;
-}
-.conditions h2 {
+.calculate h2 {
   padding-bottom: 36px;
 }
-.conditions .conditions_wrapper {
+.calculate .conditions_wrapper {
   display: flex;
   gap: 24px;
 }
-.conditions .conditions_wrapper .conditions_wrapper_img {
+.calculate .conditions_wrapper .conditions_wrapper_img {
   flex: 0 1 45%;
   position: relative;
 }
-.conditions .conditions_wrapper .conditions_wrapper_img .emoji_box {
+.calculate .conditions_wrapper .conditions_wrapper_img .emoji_box {
   display: flex;
   justify-content: space-around;
 }
-.conditions .conditions_wrapper .conditions_wrapper_content {
+.calculate .conditions_wrapper .conditions_wrapper_content {
   flex: 1 0 45%;
   display: flex;
   flex-direction: column;
   gap: 24px;
   text-align: left;
 }
-.conditions .conditions_wrapper .conditions_wrapper_content p {
+.calculate .conditions_wrapper .conditions_wrapper_content p {
   font-size: 14px;
 }
-.conditions .conditions_wrapper .btn-wrapper {
+.calculate .conditions_wrapper .btn-wrapper {
   margin: auto 0;
 }
 
@@ -1063,7 +1043,7 @@ section {
 @media only screen and (max-width: 1350px) {
   .header {
     display: block;
-    padding: 15px 0 0 !important;
+    padding: 0 !important;
   }
   .banner h1 {
     padding-bottom: 12px;
@@ -1143,6 +1123,9 @@ section {
     background: var(--Light_gray);
     padding: 10px 0;
     justify-content: center;
+  }
+  .footer .logo_wrapper .logo_wrapper_naming {
+    align-items: center;
   }
   .footer .logo_wrapper .logo {
     flex: 0 1 30%;
@@ -1343,11 +1326,16 @@ section {
   a {
     font-size: 12px;
   }
+  .contact_links .contact_link {
+    font-size: 10px;
+    font-weight: normal;
+    color: var(--Main_black);
+  }
   .header {
     padding: 0 !important;
   }
   .header .menu_btn_sidenav {
-    padding: 34px 0 0 20px;
+    padding: 25px 0 0 20px;
   }
   .header .logo_wrapper_naming span {
     font-size: 10px;
