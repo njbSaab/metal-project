@@ -5,7 +5,7 @@
   /* variable colors */
   --Light_gray: #EDEDF0;
   --Main_orange: #FD7F28;
-  --Main_orange_opacity: #fd812892;
+  --Main_orange_opacity: #fd8128d2;
   --Main_orange_dark: #ac591e;
   --Main_black: #272727;
   --Main_black_opacity: #27272778;
@@ -165,13 +165,15 @@ body {
   padding: 14px 24px;
   border-radius: 8px;
   background: var(--Main_orange);
-  animation-duration: 1.5s;
-  animation-delay: 0.5s;
+  animation-duration: 1.5s linear;
+  animation-delay: 0.5s linear;
+  transition: 0.4s linear;
 }
-.default-styles:hover {
+.default-styles .btn-default:hover {
   background: var(--Main_orange_opacity);
-  animation-duration: 1.5s;
-  animation-delay: 0.5s;
+  animation-duration: 1.5s linear;
+  animation-delay: 0.5s linear;
+  transition: 0.4s linear;
 }
 .default-styles .social_wrapper {
   flex-basis: 15%;
@@ -618,6 +620,7 @@ body {
   cursor: pointer;
 }
 .calculate .btn-wrapper .btn-default:hover {
+  background: var(--Main_orange_opacity);
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -1035,6 +1038,17 @@ body {
   height: 38px;
   padding: 8px;
   cursor: pointer;
+  border-radius: 25%;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.menu_btn:active {
+  background: var(--Main_red);
+  transition: 0.3s ease;
+}
+.menu_btn:hover {
+  background: var(--Main_red_opacity);
+  transition: 0.3s ease;
 }
 .menu_btn span {
   width: 30px;
@@ -1140,14 +1154,17 @@ body {
 @media only screen and (max-width: 1250px) {
   .header .header_navbar {
     flex-direction: column;
-    padding: 15px 0 0;
+    padding: 0;
   }
   .header .header_navbar .logo {
     display: flex;
+    position: fixed;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 0 15px 15px 15px;
+    padding: 20px 15px;
+    background: var(--Light_Bg);
+    z-index: 99;
   }
   .header .header_navbar .logo .logo_wrapper {
     gap: 0;
@@ -1167,6 +1184,7 @@ body {
     padding: 15px;
     justify-content: center;
     gap: 27px;
+    padding: 110px 0 20px;
   }
   .header .contacts_wrapper a {
     font-size: 12px;
@@ -1176,6 +1194,18 @@ body {
   }
   .nav-menu {
     display: none;
+  }
+  .benefits .container {
+    width: 100%;
+  }
+  .profite .container {
+    width: 100%;
+  }
+  .cooperation .container {
+    width: 100%;
+  }
+  .issues .container {
+    width: 100%;
   }
   .footer {
     padding: 0;
@@ -1205,7 +1235,7 @@ body {
     align-items: center !important;
     background: var(--Light_gray);
     padding: 10px 0;
-    justify-content: center;
+    justify-content: start;
   }
   .footer .logo_wrapper .logo_wrapper_naming {
     align-items: center;
@@ -1395,6 +1425,9 @@ body {
   }
   .issues .issues_wrapper {
     flex-direction: column;
+  }
+  .footer .logo_wrapper {
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 480px) {
