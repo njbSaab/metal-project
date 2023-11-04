@@ -5,6 +5,7 @@
   /* variable colors */
   --Light_gray: #EDEDF0;
   --Main_orange: #FD7F28;
+  --Main_orange_opacity: #fd812892;
   --Main_orange_dark: #ac591e;
   --Main_black: #272727;
   --Main_black_opacity: #27272778;
@@ -17,11 +18,15 @@
   --fonts-quicksand: "Quicksand", sans-serif;
 }
 
+body {
+  background: white;
+}
+
 .default-styles {
   font-family: var(--fonts-quicksand);
   font-size: 14px;
   font-weight: normal;
-  background: var(--Light_Bg);
+  background: white;
   /* header */
 }
 .default-styles a {
@@ -160,6 +165,11 @@
   padding: 14px 24px;
   border-radius: 8px;
   background: var(--Main_orange);
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+}
+.default-styles:hover {
+  background: var(--Main_orange_opacity);
   animation-duration: 1.5s;
   animation-delay: 0.5s;
 }
@@ -414,6 +424,9 @@
   border: 2px solid white;
 }
 
+.services {
+  background: white;
+}
 .services .services_wrapper {
   display: flex;
   padding: 42px 42px 0;
@@ -446,6 +459,7 @@
 
 .benefits {
   padding-bottom: 50px;
+  background: white !important;
 }
 .benefits .benefits_list {
   display: flex;
@@ -468,6 +482,9 @@
   height: -moz-fit-content !important;
   height: fit-content !important;
 }
+.benefits .benefits_list li .img img {
+  height: 84px;
+}
 .benefits .benefits_list li h6 {
   margin: 20px;
   padding-bottom: 10px;
@@ -480,7 +497,6 @@
 .calculate {
   padding-bottom: 50px;
   background: var(--Light_Bg);
-  padding-bottom: 50px;
 }
 .calculate h2 {
   padding-bottom: 24px;
@@ -606,37 +622,43 @@
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
 }
-.calculate h2 {
+
+.conditions {
+  padding-bottom: 50px;
+  background: white !important;
+}
+.conditions h2 {
   padding-bottom: 36px;
 }
-.calculate .conditions_wrapper {
+.conditions .conditions_wrapper {
   display: flex;
   gap: 24px;
 }
-.calculate .conditions_wrapper .conditions_wrapper_img {
+.conditions .conditions_wrapper .conditions_wrapper_img {
   flex: 0 1 45%;
   position: relative;
 }
-.calculate .conditions_wrapper .conditions_wrapper_img .emoji_box {
+.conditions .conditions_wrapper .conditions_wrapper_img .emoji_box {
   display: flex;
   justify-content: space-around;
 }
-.calculate .conditions_wrapper .conditions_wrapper_content {
+.conditions .conditions_wrapper .conditions_wrapper_content {
   flex: 1 0 45%;
   display: flex;
   flex-direction: column;
   gap: 24px;
   text-align: left;
 }
-.calculate .conditions_wrapper .conditions_wrapper_content p {
+.conditions .conditions_wrapper .conditions_wrapper_content p {
   font-size: 14px;
 }
-.calculate .conditions_wrapper .btn-wrapper {
+.conditions .conditions_wrapper .btn-wrapper {
   margin: auto 0;
 }
 
 .cooperation {
   padding-bottom: 50px;
+  background: white !important;
 }
 .cooperation ul {
   display: flex;
@@ -1248,6 +1270,9 @@
   }
   .banner .banner_contant .banner_contant_wrapper {
     padding: 24px 0;
+  }
+  .services {
+    background: var(--Main_color);
   }
   .services .services_wrapper {
     padding: 20px 24px 0;

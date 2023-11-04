@@ -5,6 +5,7 @@
   /* variable colors */
   --Light_gray: #EDEDF0
   --Main_orange: #FD7F28
+  --Main_orange_opacity: #fd812892
   --Main_orange_dark: #ac591e
   --Main_black: #272727
   --Main_black_opacity: #27272778
@@ -15,12 +16,14 @@
   --Gradient-orange: linear-gradient(0deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 100%), #FD7F28
   /* fonts */
   --fonts-quicksand: 'Quicksand', sans-serif
-
+body
+  background: #ffff
 .default-styles
   font-family: var(--fonts-quicksand)
   font-size: 14px
   font-weight: normal
-  background: var(--Light_Bg)
+  background: #ffff
+  
   a
     font-weight: normal
     color: inherit
@@ -158,6 +161,12 @@
     animation-duration: 1.5s
     animation-delay: .5s
 
+  &:hover
+    background: var(--Main_orange_opacity)
+    animation-duration: 1.5s
+    animation-delay: .5s
+
+    
   .social_wrapper
     flex-basis: 15%
     display: flex
@@ -408,7 +417,7 @@
       border: 2px solid white
 //section-services
 .services
-  
+  background: white
   .services_wrapper
     display: flex
     padding: 42px 42px 0
@@ -442,7 +451,7 @@
 //section-benefits
 .benefits
   padding-bottom: 50px
-
+  background: #ffff !important
   .benefits_list
     display: flex
     gap: 24px
@@ -462,6 +471,8 @@
     
       .img
         height: fit-content !important
+        img
+          height: 84px
 
       h6 
         margin: 20px
@@ -590,10 +601,9 @@
     
   //section-conditions
 
-  .conditions 
-
+.conditions 
   padding-bottom: 50px
-
+  background: white !important
   h2
     padding-bottom: 36px
 
@@ -627,7 +637,8 @@
 //section-cooperation
 .cooperation
   padding-bottom: 50px
-  
+  background: white !important
+
   ul
     display: flex
     justify-content: space-around
@@ -1214,6 +1225,7 @@
       .banner_contant_wrapper
         padding: 24px 0
   .services
+    background: var(--Main_color)
 
     .services_wrapper
       padding: 20px 24px 0

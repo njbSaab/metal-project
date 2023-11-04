@@ -23,7 +23,6 @@ $(document).ready(function () {
       $(".menu_btn_sidenav").animate({ width: "0" }, 300, function () {
         // После завершения анимации, скрываем меню
         $(".menu_btn_sidenav").css("display", "none");
-        Ω;
       });
     }
   });

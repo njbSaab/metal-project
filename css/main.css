@@ -551,7 +551,7 @@ header .social i:hover {
 h2.text_no_transform_center {
   font-size: 38px;
   text-transform: initial;
-  text-transform-text-align: center;
+  text-align: center;
 }
 
 h3.text_no_transform {
@@ -1025,7 +1025,12 @@ h6.text_no_transform {
   background-size: 25%;
   background-position: 80% 35%;
 }
-.section-about ul {
+.section-about .container-fluid {
+  background: url("../img/new/pic4s.png") no-repeat;
+  background-size: 100%;
+  background-position: 85% 100%;
+}
+.section-about .container-fluid ul {
   text-align: left;
 }
 
