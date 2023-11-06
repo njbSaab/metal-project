@@ -162,7 +162,7 @@ body
     animation-delay: .5s linear
     transition: .4s linear
     &:hover
-      background: var(--Main_orange_opacity)
+      background: var(--Main_orange_dark)
       animation-duration: 1.5s linear
       animation-delay: .5s linear
       transition: .4s linear
@@ -193,7 +193,7 @@ body
     transition: .3s 
     a:hover
       transition: .3s
-      background: var(--Main_orange_dark)
+      background: var(--Main_orange_opacity)
 
   .social_wrapper svg
     position: absolute
@@ -210,7 +210,7 @@ body
       svg
         path
           transition: .3s
-          fill: var(--Main_orange_dark)
+          fill: var(--Main_orange_opacity)
 
   /* header */
 .header
@@ -228,7 +228,7 @@ body
     margin: 0 auto
 
     .logo
-      flex: 1 1 auto  
+      flex: 1 1 21%  
 
     .logo_wrapper
       display: flex
@@ -244,31 +244,39 @@ body
       height: 100%
 
     .contacts_wrapper
-      flex: 0 0 45%
+      flex: 0 0 63%
       display: flex
+      flex-direction: column
       align-items: center
-      gap: 42px
-      font-weight: 500 !important
-      font-size: 14px
+      gap: 10px
 
     .contacts_wrapper a
       display: flex
       align-items: center
       gap: 10px
 
-    .contacts_wrapper a:first-child
-      padding-bottom: 8px       
-
     .phone-header
       margin: 0 !important
-
-    .adress-header
       display: flex
-      flex-direction: column
+      flex-direction: row
+      width: 100%
+      align-items: center
+      gap: 40px
+      a
+        font-size: 24px
+        font-weight: 800
 
-    .location_header
-      font-weight: 200 !important
+    .mail-header
+      font-weight: 500 !important
       font-size: 14px
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 95px
+      width: 100%
+      .left
+        margin-left: 20px
+
 /* nav */
 .nav-menu
   font-size: 14px
@@ -597,7 +605,7 @@ body
       -moz-transition: all 0.3s ease-in-out
       cursor: pointer
       &:hover
-        background: var(--Main_orange_opacity)
+        background: var(--Main_orange_dark)
         transition: all 0.3s ease-in-out
         -webkit-transition: all 0.3s ease-in-out
         -moz-transition: all 0.3s ease-in-out
@@ -819,6 +827,8 @@ body
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
+        transition: .2s linear
+
 
       .img_wrapper::before
         width: 25px
@@ -831,6 +841,7 @@ body
         left: 50%
         transform: translate(-50%, -50%)
         border-radius: 3px
+        transition: .2s linear
 
 
       p
@@ -861,8 +872,10 @@ body
             top: 50%
             left: 50%
             transform: translate(-50%, -50%)
+            transition: .2s linear
+
         .accordeon_hide_elem 
-          transition: max-height .2s linear
+          transition: .2s linear
           max-height: 500px
 //section-trust_us
 .trust_us
@@ -944,11 +957,41 @@ body
         display: flex
         flex-direction: column
         gap: 4px
+        li
+            a
+              transition: all 0.4s 
+              -webkit-transition: all 0.4s ease-in-out
+              -moz-transition: all 0.4s ease-in-out
+              cursor: pointer
+              position: relative
+              &::after
+                position: absolute
+                content: ""
+                width: 0
+                height: 2px
+                background: var(--Main_orange)
+                bottom: -5px
+                left: 0
+                transition: all 0.4s 
+                -webkit-transition: all 0.4s ease-in-out
+                -moz-transition: all 0.4s ease-in-out
+
+            a:hover
+                color: var(--Main_orange) 
+                transition: all 0.3s 
+                -webkit-transition: all 0.3s ease-in-out
+                -moz-transition: all 0.3s ease-in-out
+                &::after
+                  width: 100%
+                  transition: all 0.3s 
+                  -webkit-transition: all 0.3s ease-in-out
+                  -moz-transition: all 0.3s ease-in-out
+
 
     .contact_wrapper
       display: flex
       flex-direction: column
-
+      
       .flex
         flex-direction: column
       
@@ -967,11 +1010,9 @@ body
             transition: .3s
             fill: var(--Main_orange_dark)
 
-
       .phone-header
         display: flex
         flex-direction: column
-
     .button_group
       display: flex
       flex-direction: column
@@ -979,10 +1020,8 @@ body
 
     .social-for-mobile
       display: none
-
   .under_footer
     background: var(--Light_gray)
-
     p
       font-size: 14px
       font-style: normal
@@ -1035,8 +1074,6 @@ body
   
   span::after 
     bottom: -10px
-  
-
 .menu_btn_sidenav
   display: none
   position: fixed
@@ -1079,11 +1116,10 @@ body
       padding: 10px 10px
     li:not(:last-child)
       border-bottom: 1px solid var(--Light_gray)
-
       a
         color: var(--Main_black)
         text-align: left
-        
+        padding-right: 15px      
 .opacity-background
   position: fixed
   width: 100%
@@ -1100,10 +1136,6 @@ body
       width: 100%
 
   .profite
-    .container
-      width: 100%
-
-  .cooperation
     .container
       width: 100%
 
@@ -1131,7 +1163,6 @@ body
 
         .logo
           display: flex
-          position: fixed
           width: 100%
           justify-content: space-between
           align-items: center
@@ -1150,13 +1181,30 @@ body
             align-items: center
             margin-left: 30px
 
+          .menu_btn_sidenav
+            .menu_links-item_dropdown
+              position: relative
+              .menu_links-item_dropdown_icon
+                position: absolute
+                transform: rotate(180deg)
+                transition: transform 0.4s linear
+
+              .menu_links-item-body
+                padding-top: 10px
+                gap: 10px
+                display: flex
+                flex-direction: column
+                margin-left: 105px
+                max-height: 0
+                display: none
+                overflow: hidden
+                transition: max-height 0.4s linear, padding 0.2s linear
+
       .contacts_wrapper
         background: var(--Main_color)
         width: 100%
-        padding: 15px
+        padding: 5px
         justify-content: center
-        gap: 27px
-        padding: 110px 0 20px
         a
           font-size: 12px 
         
@@ -1245,51 +1293,39 @@ body
   .title 
     padding-top: 30px
   .banner
-
     .banner_wrapper
       flex-direction: column-reverse
-
     h3
       padding-bottom: 0px !important 
-
     .banner_contant
       padding: 30px 24px 0 24px
-
       .banner_contant_wrapper
         padding: 24px 0
   .services
     background: var(--Main_color)
-
     .services_wrapper
       padding: 20px 24px 0
-
       .services_content
         margin: 0
-
       .services_img
         display: none
   .benefits_list
     scroll-snap-type: x mandatory
     overflow-x: auto
     gap: 45px !important
-
     li
       flex: 1 0 25% !important
       scroll-snap-align: start
-
       img
         max-width: 100px
         max-height: 85px     
   .conditions
     padding-bottom: 30px
-
     .conditions_wrapper
       flex-direction: column
-      gap: 0
-      
+      gap: 0  
       .emoji_box
         transform: translateY(-200%)
-
         img
           max-width: 72px
           height: auto
@@ -1301,39 +1337,29 @@ body
       overflow-x: auto
       scroll-snap-type: x mandatory 
       justify-content: initial
-
       li
         scroll-snap-align: start
-
         img
-          max-width: 100px
-        
+          max-width: 100px 
         p
           text-align: center
-
       li:nth-child(odd)
         flex: 0 0 75%
-      li:nth-child(even)
-
-          
+      li:nth-child(even)     
     .btn-wrapper
       display: flex !important
   .more_expensive
     h2
       padding-bottom: 12px
     p
-      padding: 12px 12px 24px
-    
-    
+      padding: 12px 12px 24px 
     .more_expensive_btn
       padding: 24px 12px
   .about_us
     padding: 30px 24px
-
     .about_us_wrapper
       flex-direction: column
       gap: 24px
-
       .img
         max-width: 122px
         height: auto
@@ -1351,6 +1377,12 @@ body
       padding-top: 30px
 
 @media only screen and (max-width: 768px)
+  .header
+    .contacts_wrapper
+      .phone-header
+        justify-content: space-between
+        a
+         font-size: 20px
   .more_expensive
     .more_expensive_footer_wrapper
       flex-direction: column
@@ -1412,12 +1444,29 @@ body
         font-size: 10px
 
     .contacts_wrapper
-      gap: 25px !important
-      a
-       font-size: 10px !important
-       svg
-        width: 15px
-        height: 15px
+      .phone-header
+        justify-content: space-between
+        a
+          font-size: 17px
+          gap: 5px
+          svg
+            width: 15px
+            height: 15px
+      .mail-header
+        justify-content: space-evenly
+        gap: 0
+        .left
+          margin: 0
+          a
+            font-size: 10px
+            gap: 5px
+      .mail-header
+        justify-content: space-between
+        a
+        font-size: 10px !important
+        svg
+          width: 15px
+          height: 15px
   .banner
     .banner_list
       p
@@ -1573,13 +1622,25 @@ body
         svg
           width: 15px
           height: auto
-        .phone-header
-          font-weight: 500
         .mail-header
           .adress-header
             a
               font-weight: 200
 
-          
-
+@media only screen and ( max-width: 390px)
+  .header
+    .contacts_wrapper
+      .phone-header
+        justify-content: space-between
+        a
+         font-size: 14px
+      .mail-header
+        .left
+          font-size: 10px !important
+          font-weight: 200  
+          gap: 3px  
+        .right
+          font-size: 10px !important
+          font-weight: 200  
+          gap: 3px    
 

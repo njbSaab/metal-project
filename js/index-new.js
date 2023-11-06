@@ -39,3 +39,30 @@ $(document).ready(function () {
     });
   });
 });
+$(document).ready(function () {
+  $(".menu_links-item_dropdown").click(function () {
+    $(this).toggleClass("active");
+    const isActive = $(this).hasClass("active");
+    const icon = $(this).find(".menu_links-item_dropdown_icon");
+    const body = $(this).find(".menu_links-item-body");
+
+    if (isActive) {
+      icon.css("transform", "rotate(270deg)");
+      body.css("max-height", "70px");
+      body.css("display", "block");
+      body.css("padding-top", "10px");
+    } else {
+      icon.css("transform", "rotate(180deg)");
+      body.css("max-height", "0");
+      body.css("padding-top", "0");
+    }
+  });
+});
+
+$(document).on("scroll", function () {
+  if ($(document).scrollTop() > 150) {
+    $(".nav-menu").addClass("fixed");
+  } else {
+    $(".nav-menu").removeClass("fixed");
+  }
+});
