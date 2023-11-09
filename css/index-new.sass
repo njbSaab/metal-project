@@ -5,7 +5,7 @@
   /* variable colors */
   --Light_gray: #EDEDF0
   --Main_orange: #FD7F28
-  --Main_orange_opacity: #fd8128d2
+  --Main_orange_opacity: #fd812849
   --Main_orange_dark: #ac591e
   --Main_black: #272727
   --Main_black_opacity: #27272778
@@ -187,13 +187,23 @@ body
     margin: auto
     position: relative
     border-radius: 10px
-    transition: .3s easy
+    transition: .3s ease
 
   .social_wrapper
-    transition: .3s 
+    transition: .5s ease
+    a
+      transition: .5s ease
+      path
+        transition: .3s ease
+
     a:hover
-      transition: .3s
+      transition: .5s ease
       background: var(--Main_orange_opacity)
+      path
+        fill: var(--Main_orange)
+        transition: .3s ease
+
+
 
   .social_wrapper svg
     position: absolute
@@ -210,9 +220,9 @@ body
       svg
         path
           transition: .3s
-          fill: var(--Main_orange_opacity)
+          fill: var(--Main_black)
 
-  /* header */
+/* header */
 .header
   padding: 15px 42px !important
   background-color: var(--Light_gray)
@@ -1008,7 +1018,7 @@ body
         svg
           path
             transition: .3s
-            fill: var(--Main_orange_dark)
+            fill: var(--Main_black)
 
       .phone-header
         display: flex
@@ -1058,7 +1068,6 @@ body
     display: block
     position: relative
 
-    
   span::before,
   span::after 
     content: ''
@@ -1067,7 +1076,6 @@ body
     width: 100%
     height: 2px
     background: var(--Main_black)
-
 
   span::before 
     top: -10px 
@@ -1119,7 +1127,10 @@ body
       a
         color: var(--Main_black)
         text-align: left
-        padding-right: 15px      
+
+      .menu_links-item_dropdown_icon
+        right: 50%
+
 .opacity-background
   position: fixed
   width: 100%
@@ -1191,9 +1202,9 @@ body
 
               .menu_links-item-body
                 padding-top: 10px
-                gap: 10px
+                gap: 30px
                 display: flex
-                flex-direction: column
+                flex-direction: row
                 margin-left: 105px
                 max-height: 0
                 display: none
@@ -1282,7 +1293,6 @@ body
       background: var(--Light_gray)
       padding: 30px
       justify-content: center
-
 
   .under_footer
     background: var(--Main_black) !important
@@ -1444,6 +1454,7 @@ body
         font-size: 10px
 
     .contacts_wrapper
+      padding: 10px 20px
       .phone-header
         justify-content: space-between
         a

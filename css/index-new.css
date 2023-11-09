@@ -5,7 +5,7 @@
   /* variable colors */
   --Light_gray: #EDEDF0;
   --Main_orange: #FD7F28;
-  --Main_orange_opacity: #fd8128d2;
+  --Main_orange_opacity: #fd812849;
   --Main_orange_dark: #ac591e;
   --Main_black: #272727;
   --Main_black_opacity: #27272778;
@@ -27,7 +27,6 @@ body {
   font-size: 14px;
   font-weight: normal;
   background: white;
-  /* header */
 }
 .default-styles a {
   font-weight: normal;
@@ -193,14 +192,24 @@ body {
   margin: auto;
   position: relative;
   border-radius: 10px;
-  transition: 0.3s easy;
+  transition: 0.3s ease;
 }
 .default-styles .social_wrapper {
-  transition: 0.3s;
+  transition: 0.5s ease;
+}
+.default-styles .social_wrapper a {
+  transition: 0.5s ease;
+}
+.default-styles .social_wrapper a path {
+  transition: 0.3s ease;
 }
 .default-styles .social_wrapper a:hover {
-  transition: 0.3s;
+  transition: 0.5s ease;
   background: var(--Main_orange_opacity);
+}
+.default-styles .social_wrapper a:hover path {
+  fill: var(--Main_orange);
+  transition: 0.3s ease;
 }
 .default-styles .social_wrapper svg {
   position: absolute;
@@ -216,9 +225,10 @@ body {
 }
 .default-styles .contacts_wrapper a:hover svg path {
   transition: 0.3s;
-  fill: var(--Main_orange_opacity);
+  fill: var(--Main_black);
 }
 
+/* header */
 .header {
   padding: 15px 42px !important;
   background-color: var(--Light_gray);
@@ -1046,7 +1056,7 @@ body {
 }
 .footer .footer_wrapper .contact_wrapper a:hover svg path {
   transition: 0.3s;
-  fill: var(--Main_orange_dark);
+  fill: var(--Main_black);
 }
 .footer .footer_wrapper .contact_wrapper .phone-header {
   display: flex;
@@ -1167,7 +1177,9 @@ body {
 .menu_btn_sidenav ul li:not(:last-child) a {
   color: var(--Main_black);
   text-align: left;
-  padding-right: 15px;
+}
+.menu_btn_sidenav ul li:not(:last-child) .menu_links-item_dropdown_icon {
+  right: 50%;
 }
 
 .opacity-background {
@@ -1242,9 +1254,9 @@ body {
   }
   .header .header_navbar .logo .menu_btn_sidenav .menu_links-item_dropdown .menu_links-item-body {
     padding-top: 10px;
-    gap: 10px;
+    gap: 30px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-left: 105px;
     max-height: 0;
     display: none;
@@ -1535,6 +1547,9 @@ body {
   }
   .header .logo_wrapper_naming span {
     font-size: 10px;
+  }
+  .header .contacts_wrapper {
+    padding: 10px 20px;
   }
   .header .contacts_wrapper .phone-header {
     justify-content: space-between;

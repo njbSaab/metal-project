@@ -41,15 +41,15 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
   $(".menu_links-item_dropdown").click(function () {
-    $(this).toggleClass("active");
-    const isActive = $(this).hasClass("active");
+    $(this).toggleClass("opened");
+    const isActive = $(this).hasClass("opened");
     const icon = $(this).find(".menu_links-item_dropdown_icon");
     const body = $(this).find(".menu_links-item-body");
 
     if (isActive) {
       icon.css("transform", "rotate(270deg)");
       body.css("max-height", "70px");
-      body.css("display", "block");
+      body.css("display", "flex");
       body.css("padding-top", "10px");
     } else {
       icon.css("transform", "rotate(180deg)");
